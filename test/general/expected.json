@@ -1,0 +1,55 @@
+{
+  "version": "2.0",
+  "title": "The Daily",
+  "description": "<p>some html text</p>",
+  "language": "en",
+  "links": [
+    {
+      "rel": "alternate",
+      "url": "https://www.nytimes.com/the-daily"
+    }
+  ],
+  "image": {
+    "link": "https://googl.com",
+    "url": "https://google.com/image.jpeg",
+    "title": "The Example Daily"
+  },
+  "managingEditor": "editor@example.com (The Example)",
+  "webMaster": "webmaster@example.com (The Example)",
+  "publishedOn": "Sat, 02 Jan 2021 16:39:00 GMT",
+  "lastBuildOn": "Sat, 01 Jan 2021 16:39:00 GMT",
+  "categories": [
+    "news"
+  ],
+  "items": [
+    {
+      "title": "Some title",
+      "description": "Yeap, it's a text",
+      "content": "Yeap, it's a text",
+      "links": [
+        {
+          "rel": "alternate",
+          "url": "https://www.nytimes.com/2017/05/18/podcasts/the-daily/robert-mueller-rod-rosenstein.html"
+        }
+      ],
+      "guid": {
+        "value": "gid://art19-episode-locator/V0/3yEGhoUQ-NUtPe0mqaqhp2rJwOwJq8Hy5ALhrrAf0Yo",
+        "isPermaLink": true
+      },
+      "categories": [
+        "news",
+        "funny"
+      ],
+      "enclosure": {
+        "url": "https://dts.podtrac.com/redirect.mp3/chtbl.com/track/8DB4DB/rss.art19.com/episodes/8ded3a5c-5959-4593-8639-e7c0d3522366.mp3",
+        "type": "audio/mpeg",
+        "length": 20938919
+      },
+      "publishedOn": "Sat, 03 Jan 2021 17:39:00 GMT",
+      "source": {
+        "title": "Education News",
+        "url": "http://www.nasa.gov/rss/dyn/educationnews.rss"
+      }
+    }
+  ]
+}

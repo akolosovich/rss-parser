@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:art19="https://art19.com/xmlns/rss-extensions/1.0" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0/">
+    <channel>
+        <title>The Daily</title>
+        <description>
+            <![CDATA[<p>some html text</p>]]>
+        </description>
+        <lastBuildDate>Sat, 01 Jan 2021 16:39:00 GMT</lastBuildDate>
+        <pubDate>Sat, 02 Jan 2021 16:39:00 GMT</pubDate>
+        <managingEditor>editor@example.com (The Example)</managingEditor>
+        <webMaster>webmaster@example.com (The Example)</webMaster>
+        <copyright>© 2020-2021 Example</copyright>
+        <generator>ART19</generator>
+        <category>news</category>
+        <link>https://www.nytimes.com/the-daily</link>
+        <language>en</language>
+        <image>
+            <title>The Example Daily</title>
+            <link>https://googl.com</link>
+            <url>https://google.com/image.jpeg</url>
+            <width>98</width>
+            <height>64</height>
+        </image>
+        <ttl>10</ttl>
+        <dc:publisher>Example Doc</dc:publisher>
+        <atom:link href="https://rss.art19.com/the-daily" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Some title</title>
+            <description>
+                <![CDATA[Yeap, it's a text]]>
+            </description>
+            <content:encoded>
+                <![CDATA[Yeap, it's a text]]>
+            </content:encoded>
+            <link>https://www.nytimes.com/2017/05/18/podcasts/the-daily/robert-mueller-rod-rosenstein.html</link>
+            <author>thedaily@nytimes.com (1619)</author>
+            <guid isPermaLink="false">gid://art19-episode-locator/V0/3yEGhoUQ-NUtPe0mqaqhp2rJwOwJq8Hy5ALhrrAf0Yo</guid>
+            <pubDate>Sat, 03 Jan 2021 17:39:00 GMT</pubDate>
+            <enclosure url="https://dts.podtrac.com/redirect.mp3/chtbl.com/track/8DB4DB/rss.art19.com/episodes/8ded3a5c-5959-4593-8639-e7c0d3522366.mp3" type="audio/mpeg" length="20938919" />
+            <category>news</category>
+            <category>funny</category>
+            <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+            <dc:creator>
+                <![CDATA[ Barstool Sports ]]>
+            </dc:creator>
+        </item>
+    </channel>
+</rss>
