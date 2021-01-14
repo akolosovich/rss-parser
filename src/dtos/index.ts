@@ -34,19 +34,6 @@ export type Source = null | {
     title: Str
 }
 
-export type Channel = null | {
-    title: Str
-    description: Str
-    language: Str
-    links: null | Link[]
-    image: Image
-    managingEditor: Str
-    webMaster: Str
-    publishedOn: Str
-    lastBuildOn: Str
-    categories: null | Str[]
-}
-
 export type ChannelItem = null | {
     title: Str
     description: Str
@@ -57,4 +44,19 @@ export type ChannelItem = null | {
     enclosure: Enclosure
     publishedOn: Str
     source: Source
+}
+
+export type Channel = null | {
+    version: Str
+    title: Str
+    description: Str
+    language: Str
+    links: null | Link[]
+    image: Image
+    managingEditor: Str
+    webMaster: Str
+    publishedOn: Str
+    lastBuildOn: Str
+    categories: null | Str[]
+    items: null | ChannelItem[]
 }

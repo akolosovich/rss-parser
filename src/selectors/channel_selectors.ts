@@ -1,4 +1,5 @@
 import { Channel, Str, Image } from '../dtos';
+import { getItems } from './channel_item_selector';
 import { 
   trimOrNull, 
   getTitle, 
@@ -34,15 +35,23 @@ const getImage = (obj: any): Image => {
   };
 };
 
-export const getChannel = (data: any): Channel => ({
-  title: getTitle(data),
-  description: getDescription(data),
-  language: getLanguage(data),
-  links: getLinks(data),
-  image: getImage(data),
-  managingEditor: getManagingEditor(data),
-  webMaster: getWebMaster(data),
-  publishedOn: getPublishedOn(data),
-  lastBuildOn: getLastBuildDate(data),
-  categories: getCategories(data),
-});
+export const getChannel = (content: any): Channel => {
+  const root = content.rss || content.feed;
+  const version = root['@_version'];
+  const channel = root.channel || root;
+
+  return {
+    version,
+    title: getTitle(channel),
+    description: getDescription(channel),
+    language: getLanguage(channel),
+    links: getLinks(channel),
+    image: getImage(channel),
+    managingEditor: getManagingEditor(channel),
+    webMaster: getWebMaster(channel),
+    publishedOn: getPublishedOn(channel),
+    lastBuildOn: getLastBuildDate(channel),
+    categories: getCategories(channel),
+    items: getItems(channel),
+  };
+};

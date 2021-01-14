@@ -1,26 +1,20 @@
+import { Channel } from "./dtos";
+
 export class RssParser {
-  xmlParser: any;
-  selectors: any;
+  private xmlParser: any;
+  private selectors: any;
 
   constructor(xmlParser: any, selectors: any) {
     this.xmlParser = xmlParser;
     this.selectors = selectors;
   }
 
-  parseString(data: any) {
+  parseString(xml: string): Channel {
     const options = {
       ignoreAttributes: false,
     };
-    const content = this.xmlParser.parse(data, options);
+    const content = this.xmlParser.parse(xml, options);
 
-    const root = content.rss || content.feed;
-    const version = root['@_version'];
-    const channel = root.channel || root;
-
-    return {
-      version,
-      ...this.selectors.getChannel(channel),
-      items: this.selectors.getItems(channel),
-    };
+    return this.selectors.getChannel(content);
   }
 }

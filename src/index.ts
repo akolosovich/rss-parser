@@ -1,7 +1,6 @@
 import xmlParser from 'fast-xml-parser';
 
 import { getChannel } from './selectors/channel_selectors';
-import { getItems } from './selectors/channel_item_selector';
 import { RssParser } from './rss_parser';
 
-export const rssParser = new RssParser(xmlParser, { getChannel, getItems });
+export const rssParser = new RssParser(xmlParser, { getChannel });
