@@ -1,0 +1,139 @@
+{
+  "version": "2.0",
+  "title": null,
+  "description": null,
+  "language": null,
+  "links": [],
+  "image": null,
+  "managingEditor": null,
+  "webMaster": null,
+  "lastBuildOn": null,
+  "categories": [],
+  "items": [
+    {
+      "title": "item 1",
+      "description": "item 1 description",
+      "content": null,
+      "links": [],
+      "guid": null,
+      "categories": [],
+      "enclosure": null,
+      "source": null,
+      "media": {
+        "categories": [
+          {
+            "value": "item 1 cat 1",
+            "scheme": null,
+            "label": null
+          },
+          {
+            "value": "item 1 cat 2",
+            "scheme": null,
+            "label": null
+          }
+        ],
+        "content": {
+          "title": {
+            "value": "item 1 media title",
+            "type": "plain"
+          },
+          "description": {
+            "value": "item 1 media description",
+            "type": "plain"
+          },
+          "thumbnail": {
+            "url": "http://item-1-media/thumbnail.jpg",
+            "width": 75,
+            "height": 50,
+            "time": "12:05:01.123"
+          },
+          "categories": [],
+          "credit": {
+            "value": "Tom Johnson",
+            "role": "author",
+            "scheme": "urn:ebu"
+          },
+          "copyright": {
+            "url": "http://www.foo.com/movie.mov"
+          },
+          "url": "http://www.foo.com/movie.mov",
+          "fileSize": 12216320,
+          "type": "video/quicktime",
+          "medium": "video",
+          "isDefault": true,
+          "expression": "full",
+          "bitrate": 128,
+          "framerate": 25,
+          "samplingrate": 0,
+          "channels": 2,
+          "duration": 185,
+          "height": 200,
+          "width": 300,
+          "lang": "en"
+        }
+      }
+    },
+    {
+      "title": "item 2",
+      "description": null,
+      "content": null,
+      "links": [],
+      "guid": null,
+      "categories": [],
+      "enclosure": null,
+      "source": null,
+      "media": {
+        "categories": [],
+        "content": {
+          "title": {
+            "value": "item-2-media-title",
+            "type": "plain"
+          },
+          "description": {
+            "value": "item-2-media-description",
+            "type": "html"
+          },
+          "thumbnail": {
+            "url": "http://item-2-media/thumbnail.jpg",
+            "width": 0,
+            "height": 0
+          },
+          "categories": [
+            {
+              "value": "music/artist/album/song",
+              "scheme": "http://search.yahoo.com/mrss/category_ schema"
+            },
+            {
+              "value": "Arts/Movies/Titles/A/Ace_Ventura_Series/Ace_Ventura_ -_Pet_Detective",
+              "scheme": "http://dmoz.org",
+              "label": "Ace Ventura - Pet Detective"
+            },
+            {
+              "value": "ycantpark mobile",
+              "scheme": "urn:flickr:tags"
+            }
+          ],
+          "credit": {
+            "value": "item-2-media-author",
+            "role": "author",
+            "scheme": "urn:ebu"
+          },
+          "copyright": {
+            "url": "http://item-2-media-content.mp4"
+          },
+          "url": "http://item-2-media-content.mp4",
+          "fileSize": 7,
+          "medium": "video",
+          "isDefault": true,
+          "bitrate": 0,
+          "framerate": 0,
+          "samplingrate": 0,
+          "channels": 0,
+          "duration": 10,
+          "height": 0,
+          "width": 0
+        }
+      }
+    }
+  ]
+}

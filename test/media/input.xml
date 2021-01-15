@@ -1,0 +1,49 @@
+<rss xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <item>
+            <title>item 1</title>
+            <description>item 1 description</description>
+            <media:category>item 1 cat 1</media:category>
+            <media:category>item 1 cat 2</media:category>
+            <media:content 
+                url="http://www.foo.com/movie.mov" 
+                fileSize="12216320" 
+                type="video/quicktime" 
+                medium="video"
+                isDefault="true" 
+                expression="full" 
+                bitrate="128" 
+                framerate="25" 
+                samplingrate="44.1" 
+                channels="2"
+                duration="185" 
+                height="200" 
+                width="300" 
+                lang="en">
+                <media:title type="plain">item 1 media title</media:title>
+                <media:description type="plain">item 1 media description</media:description>
+                <media:keywords>item-1-media-key-1, item-1-media-key-2</media:keywords>
+                <media:thumbnail url="http://item-1-media/thumbnail.jpg" width="75" height="50" time="12:05:01.123" />
+                <media:credit role="author" scheme="urn:ebu">Tom Johnson</media:credit>
+                <media:copyright url="https://item-1-media-copyright" />
+                <media:rating scheme="urn:simple">adult</media:rating>
+                <media:rating scheme="urn:icra">r (cz 1 lz 1 nz 1 oz 1 vz 1)</media:rating>
+                <media:rating scheme="urn:mpaa">pg</media:rating>
+                <media:rating scheme="urn:v-chip">tv-y7-fv</media:rating>
+            </media:content>
+        </item>
+        <item>
+            <title>item 2</title>
+            <media:content url="http://item-2-media-content.mp4" language="en-us" fileSize="7" duration="10.0"
+                medium="video" isDefault="true">
+                <media:title type="plain">item-2-media-title</media:title>
+                <media:description type="html">item-2-media-description</media:description>
+                <media:thumbnail url="http://item-2-media/thumbnail.jpg" />
+                <media:credit role="author" scheme="urn:ebu">item-2-media-author</media:credit>
+                <media:category scheme="http://search.yahoo.com/mrss/category_ schema">music/artist/album/song</media:category>
+                <media:category scheme="http://dmoz.org" label="Ace Ventura - Pet Detective">Arts/Movies/Titles/A/Ace_Ventura_Series/Ace_Ventura_ -_Pet_Detective</media:category>
+                <media:category scheme="urn:flickr:tags">ycantpark mobile</media:category>
+            </media:content>
+        </item>
+    </channel>
+</rss>

@@ -7,13 +7,6 @@ describe('createStructuredSelector', () => {
     it('with 0 arguments', () => {
         expect(createStructuredSelector).toThrowError(eError.InvalidArguments);
     });
-    it('with 0 arguments again', () => {
-        const test: any = createStructuredSelector({
-            result: plusOne,
-        });
-
-        expect(() => test()).toThrowError(eError.InvalidArguments);
-    });
     it('with 1 argument', () => {
         const test: any = createStructuredSelector({
             result: plusOne,

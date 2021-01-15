@@ -10,9 +10,11 @@
     }
   ],
   "image": {
-    "link": "https://googl.com",
-    "url": "https://google.com/image.jpeg",
-    "title": "The Example Daily"
+    "link": "http://channel-image-link",
+    "url": "http://channel-image.png",
+    "title": "channel image title",
+    "height": 114,
+    "width": 114
   },
   "managingEditor": "editor@example.com (The Example)",
   "webMaster": "webmaster@example.com (The Example)",
@@ -49,7 +51,30 @@
       "source": {
         "title": "Education News",
         "url": "http://www.nasa.gov/rss/dyn/educationnews.rss"
-      }
+      },
+      "media": null
+    },
+    {
+      "title": "Fördermittel des Bundes werden oft später abgerufen",
+      "description": "Haushalt/Antwort Dass Fördermittel von den Kommunen oft mit Verzögerung abgerufen werden, erklärt die Regierung in einer Antwort auf eine FDP-Anfrage damit, dass oft erst der Abschluss von Maßnahmen abgewartet werde.",
+      "content": null,
+      "links": [
+        {
+          "rel": "alternate",
+          "url": "https://www.bundestag.de/presse/hib/815100-815100"
+        }
+      ],
+      "guid": {
+        "value": "https://www.bundestag.de/presse/hib/815100-815100",
+        "isPermaLink": false
+      },
+      "categories": [
+        "Haushalt",
+        "Antwort"
+      ],
+      "enclosure": null,
+      "source": null,
+      "media": null
     }
   ]
 }

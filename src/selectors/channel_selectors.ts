@@ -1,47 +1,54 @@
-import { Channel, Str, Image } from '../dtos';
-import { getItems } from './channel_item_selector';
-import { 
-  trimOrNull, 
-  getTitle, 
-  getDescription, 
-  getLinks, 
-  getCategories, 
-  getPublishedOn
+import { Channel, Fun, Image } from '../dtos';
+import { createStructuredSelector, flow, get, getOrNull, trimOrNull } from '../helpers';
+import { getItems } from './channel_item_selectors';
+import {
+  getTitle,
+  getDescription,
+  getLinks,
+  getCategories,
+  getPublishedOn,
+  getPropVersion,
 } from './common_selectors';
 
-const getField = (field: string) => (obj: any): Str => {
-  if (!obj || !obj[field]) {
-    return null;
-  }
+const getLanguage = flow(
+  get('language'),
+  trimOrNull,
+);
 
-  return trimOrNull(obj[field]);
-};
+const getManagingEditor = flow(
+  get('managingEditor'),
+  trimOrNull,
+);
 
-const getLanguage = getField('language');
-const getManagingEditor = getField('managingEditor');
-const getWebMaster = getField('webMaster');
-const getLastBuildDate = getField('lastBuildDate');
-const getImage = (obj: any): Image => {
-  if (!obj || !obj.image) {
-    return null;
-  }
+const getWebMaster = flow(
+  get('webMaster'),
+  trimOrNull,
+);
 
-  const { image } = obj;
+const getLastBuildDate = flow(
+  get('lastBuildDate'),
+  trimOrNull,
+);
 
-  return {
-    link: trimOrNull(image.link),
-    url: trimOrNull(image.url),
-    title: trimOrNull(image.title),
-  };
-};
+const selectImage = createStructuredSelector({
+  link: getOrNull('link'),
+  url: getOrNull('url'),
+  title: getOrNull('title'),
+  height: getOrNull('height'),
+  width: getOrNull('width'),
+});
+
+const getImage: Fun<Image> = flow(
+  get('image'),
+  (data: any) => data ? selectImage(data): null,
+);
 
 export const getChannel = (content: any): Channel => {
   const root = content.rss || content.feed;
-  const version = root['@_version'];
   const channel = root.channel || root;
 
   return {
-    version,
+    version: getPropVersion(root),
     title: getTitle(channel),
     description: getDescription(channel),
     language: getLanguage(channel),

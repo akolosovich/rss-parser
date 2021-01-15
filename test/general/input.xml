@@ -15,15 +15,14 @@
         <link>https://www.nytimes.com/the-daily</link>
         <language>en</language>
         <image>
-            <title>The Example Daily</title>
-            <link>https://googl.com</link>
-            <url>https://google.com/image.jpeg</url>
-            <width>98</width>
-            <height>64</height>
+            <link>http://channel-image-link</link>
+            <title>channel image title</title>
+            <url>http://channel-image.png</url>
+            <description>channel-image-description</description>
+            <height>114</height>
+            <width>114</width>
         </image>
         <ttl>10</ttl>
-        <dc:publisher>Example Doc</dc:publisher>
-        <atom:link href="https://rss.art19.com/the-daily" rel="self" type="application/rss+xml" />
         <item>
             <title>Some title</title>
             <description>
@@ -40,9 +39,14 @@
             <category>news</category>
             <category>funny</category>
             <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
-            <dc:creator>
-                <![CDATA[ Barstool Sports ]]>
-            </dc:creator>
+        </item>
+        <item>
+            <title>Fördermittel des Bundes werden oft später abgerufen</title>
+            <link>https://www.bundestag.de/presse/hib/815100-815100</link>
+            <description>Haushalt/Antwort Dass Fördermittel von den Kommunen oft mit Verzögerung abgerufen werden, erklärt die Regierung in einer Antwort auf eine FDP-Anfrage damit, dass oft erst der Abschluss von Maßnahmen abgewartet werde.</description>
+            <category>Haushalt</category>
+            <category>Antwort</category>
+            <guid>https://www.bundestag.de/presse/hib/815100-815100</guid>
         </item>
     </channel>
 </rss>

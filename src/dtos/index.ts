@@ -1,5 +1,5 @@
-export type Str = null | String | string;
-export type Num = null | Number | number;
+
+export type Nullable<T> = null | T;
 export type Fun<T> = (...args: any[]) => T;
 
 export enum eError {
@@ -8,55 +8,112 @@ export enum eError {
 }
 
 export type Link = null | {
-    rel: Str,
-    url: Str
+    rel: Nullable<string>,
+    url: Nullable<string>
 }
 
 export type Enclosure = null | {
-    url: Str
-    type: Str
-    length: Num
+    url: Nullable<string>
+    type: Nullable<string>
+    length: number
 }
 
 export type Guid = null | {
-    value: Str
+    value: Nullable<string>
     isPermaLink: Boolean
 }
 
 export type Image = null | {
-    url: Str
-    title: Str
-    link: Str
+    url: Nullable<string>
+    title: Nullable<string>
+    link: Nullable<string>
 }
 
 export type Source = null | {
-    url: Str
-    title: Str
+    url: Nullable<string>
+    title: Nullable<string>
 }
 
 export type ChannelItem = null | {
-    title: Str
-    description: Str
-    content: Str
-    links: null | Link[]
+    title: Nullable<string>
+    description: Nullable<string>
+    content: Nullable<string>
+    links: Link[]
     guid: Guid
-    categories: null | Str[]
+    categories: Nullable<string>[]
     enclosure: Enclosure
-    publishedOn: Str
+    publishedOn: Nullable<string>
     source: Source
+    media: Media
 }
 
 export type Channel = null | {
-    version: Str
-    title: Str
-    description: Str
-    language: Str
-    links: null | Link[]
+    version: Nullable<string>
+    title: Nullable<string>
+    description: Nullable<string>
+    language: Nullable<string>
+    links: Link[]
     image: Image
-    managingEditor: Str
-    webMaster: Str
-    publishedOn: Str
-    lastBuildOn: Str
-    categories: null | Str[]
-    items: null | ChannelItem[]
+    managingEditor: Nullable<string>
+    webMaster: Nullable<string>
+    publishedOn: Nullable<string>
+    lastBuildOn: Nullable<string>
+    categories: Nullable<string>[]
+    items: ChannelItem[]
+}
+
+export type MediaTextData = null | {
+    value: Nullable<string>
+    type: Nullable<string>
+}
+
+export type MediaThumbnail = null | {
+    url: Nullable<string>
+    width: number
+    height: number
+    time: Nullable<string>
+}
+
+export type MediaCredit = null | {
+    value: Nullable<string>
+    role: Nullable<string>
+    scheme: Nullable<string>
+}
+
+export type MediaCopyright = null | {
+    url: Nullable<string>
+}
+
+export type MediaCategory = null | {
+    value: Nullable<string>
+    scheme: Nullable<string>
+    label: Nullable<string>
+}
+
+export type MediaContent = null | {
+    title: MediaTextData
+    description: MediaTextData
+    thumbnail: MediaThumbnail
+    categories: MediaCategory[]
+    credit: MediaCredit
+    copyright: MediaCopyright
+    url: Nullable<string>,
+    fileSize: number
+    type: Nullable<string>
+    medium: Nullable<string>
+    isDefault: boolean
+    expression: Nullable<string>
+    bitrate: number
+    framerate: number
+    samplingrate: number
+    channels: number
+    duration: number
+    height: number
+    width: number
+    lang: Nullable<string>
+}
+
+export type Media = null | {
+    content: MediaContent
+    categories: MediaCategory[]
 }
