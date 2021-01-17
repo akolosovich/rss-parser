@@ -1,0 +1,442 @@
+{
+  "id": {
+    "value": "channel-id",
+    "isPermaLink": false
+  },
+  "title": "channel-title",
+  "version": null,
+  "description": "channel-subtitle",
+  "language": null,
+  "links": [
+    {
+      "href": "https://channel-link-self",
+      "rel": "self",
+      "type": "application/atom+xml",
+      "hreflang": null,
+      "title": null,
+      "length": 0
+    },
+    {
+      "href": "https://channel-link-self-alternate",
+      "rel": "alternate",
+      "type": "text/html",
+      "hreflang": null,
+      "title": null,
+      "length": 0
+    }
+  ],
+  "image": null,
+  "managingEditor": null,
+  "webMaster": null,
+  "authors": [
+    {
+      "name": "channel-author-name",
+      "email": "channel_author@example.com",
+      "uri": "http://channel-author-uri"
+    }
+  ],
+  "contributors": [],
+  "updatedOn": "2021-01-09T16:17:17+00:00",
+  "publishedOn": null,
+  "categories": [
+    {
+      "value": "channel-technology-term-1",
+      "scheme": null,
+      "label": "channel-technology-lable-1",
+      "domain": null
+    },
+    {
+      "value": "channel-technology-term-2",
+      "scheme": null,
+      "label": "channel-technology-lable-2",
+      "domain": null
+    }
+  ],
+  "entries": [
+    {
+      "id": {
+        "value": "title",
+        "isPermaLink": false
+      },
+      "title": {
+        "value": "title",
+        "type": "html"
+      },
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "updated",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": "2003-12-13T18:30:02-05:00",
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "published",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": "2003-12-13T09:17:51-08:00",
+      "copyright": null,
+      "links": [],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "summary",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": {
+        "value": "some summary",
+        "type": "html"
+      },
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "content",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": {
+        "value": "some content",
+        "type": "html"
+      },
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "rights",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": {
+        "value": "&amp;copy; 2005 John Doe",
+        "type": "html"
+      },
+      "links": [],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "source",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [],
+      "source": {
+        "id": {
+          "value": "http://source_id/",
+          "isPermaLink": false
+        },
+        "title": "source_title",
+        "url": null,
+        "updatedOn": "2003-12-13T18:30:02Z"
+      },
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "one_author",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [
+        {
+          "name": "one_author_name",
+          "email": "one_author_email@mail.com",
+          "uri": "http://one_author_uri"
+        }
+      ],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "multiple_authors",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [
+        {
+          "name": "multiple_authors_name_1",
+          "email": "multiple_authors_email_1@mail.com",
+          "uri": "http://multiple_authors_uri_1"
+        },
+        {
+          "name": "multiple_authors_name_2",
+          "email": "multiple_authors_email_2@mail.com",
+          "uri": "http://multiple_authors_uri_2"
+        }
+      ],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "one_link",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [
+        {
+          "href": "https://one_link_link_href",
+          "rel": "alternate",
+          "type": null,
+          "hreflang": null,
+          "title": null,
+          "length": 0
+        }
+      ],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "multiple_links",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [
+        {
+          "href": "https://multiple_links_link_href_1",
+          "rel": "alternate",
+          "type": null,
+          "hreflang": null,
+          "title": null,
+          "length": 0
+        },
+        {
+          "href": "https://multiple_links_link_href_2",
+          "rel": "self",
+          "type": null,
+          "hreflang": null,
+          "title": null,
+          "length": 0
+        }
+      ],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "one_category",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [
+        {
+          "value": "one_category_term_1",
+          "scheme": "http://some_scheme",
+          "label": "one_category_label_1",
+          "domain": null
+        }
+      ],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "multiple_categories",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [
+        {
+          "value": "multiple_categories_term_1",
+          "scheme": null,
+          "label": "multiple_categories_label_1",
+          "domain": null
+        },
+        {
+          "value": "multiple_categories_term_2",
+          "scheme": null,
+          "label": "multiple_categories_label_2",
+          "domain": null
+        }
+      ],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "one_contributor",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [
+        {
+          "name": "one_contributor_name",
+          "email": "one_contributor_email@mail.com",
+          "uri": "http://one_contributor_uri"
+        }
+      ],
+      "media": null
+    },
+    {
+      "id": {
+        "value": "multiple_contributors",
+        "isPermaLink": false
+      },
+      "title": null,
+      "description": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [
+        {
+          "name": "multiple_contributors_name_1",
+          "email": "multiple_contributors_email_1@mail.com",
+          "uri": "http://multiple_contributors_uri_1"
+        },
+        {
+          "name": "multiple_contributors_name_2",
+          "email": "multiple_contributors_email_2@mail.com",
+          "uri": "http://multiple_contributors_uri_2"
+        }
+      ],
+      "media": null
+    }
+  ]
+}

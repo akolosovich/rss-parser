@@ -1,24 +1,39 @@
 {
-  "version": "2.0",
+  "id": null,
   "title": null,
+  "version": "2.0",
   "description": null,
   "language": null,
   "links": [],
   "image": null,
   "managingEditor": null,
   "webMaster": null,
-  "lastBuildOn": null,
+  "authors": [],
+  "contributors": [],
+  "updatedOn": null,
+  "publishedOn": null,
   "categories": [],
-  "items": [
+  "entries": [
     {
-      "title": "item 1",
-      "description": "item 1 description",
-      "content": null,
+      "id": null,
+      "title": {
+        "value": "item 1",
+        "type": "html"
+      },
+      "description": {
+        "value": "item 1 description",
+        "type": "html"
+      },
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
       "links": [],
-      "guid": null,
       "categories": [],
-      "enclosure": null,
       "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
       "media": {
         "categories": [
           {
@@ -74,14 +89,22 @@
       }
     },
     {
-      "title": "item 2",
+      "id": null,
+      "title": {
+        "value": "item 2",
+        "type": "html"
+      },
       "description": null,
-      "content": null,
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
       "links": [],
-      "guid": null,
       "categories": [],
-      "enclosure": null,
       "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
       "media": {
         "categories": [],
         "content": {
@@ -96,12 +119,14 @@
           "thumbnail": {
             "url": "http://item-2-media/thumbnail.jpg",
             "width": 0,
-            "height": 0
+            "height": 0,
+            "time": null
           },
           "categories": [
             {
               "value": "music/artist/album/song",
-              "scheme": "http://search.yahoo.com/mrss/category_ schema"
+              "scheme": "http://search.yahoo.com/mrss/category_ schema",
+              "label": null
             },
             {
               "value": "Arts/Movies/Titles/A/Ace_Ventura_Series/Ace_Ventura_ -_Pet_Detective",
@@ -110,7 +135,8 @@
             },
             {
               "value": "ycantpark mobile",
-              "scheme": "urn:flickr:tags"
+              "scheme": "urn:flickr:tags",
+              "label": null
             }
           ],
           "credit": {
@@ -123,15 +149,18 @@
           },
           "url": "http://item-2-media-content.mp4",
           "fileSize": 7,
+          "type": null,
           "medium": "video",
           "isDefault": true,
+          "expression": null,
           "bitrate": 0,
           "framerate": 0,
           "samplingrate": 0,
           "channels": 0,
           "duration": 10,
           "height": 0,
-          "width": 0
+          "width": 0,
+          "lang": null
         }
       }
     }

@@ -1,12 +1,12 @@
-import { eError, Fun } from '../dtos';
+import { Dictionary, eError, Fun } from '../dtos';
 import { isFunction } from './core';
 
-export const createSelector = (...args: any[]): Fun<any> => {
+export const createSelector = <T>(...args: Function[]): Fun<T> => {
     if (!args || !args.length) {
       throw new TypeError(eError.InvalidArguments);
     }
   
-    return (data: any) => {
+    return (data: any): T => {
       if (!data) {
         throw new TypeError(eError.InvalidArguments);
       }
@@ -19,7 +19,7 @@ export const createSelector = (...args: any[]): Fun<any> => {
       if (props.length === 1) {
         const fn = props.shift();
   
-        if (!isFunction(fn)) {
+        if (!fn || !isFunction(fn)) {
           throw new TypeError(eError.NotAFunction);
         }
   
@@ -29,7 +29,7 @@ export const createSelector = (...args: any[]): Fun<any> => {
       while (props.length) {
         const fn = props.shift();
   
-        if (!isFunction(fn)) {
+        if (!fn || !isFunction(fn)) {
           throw new TypeError(eError.NotAFunction);
         }
   
@@ -44,12 +44,12 @@ export const createSelector = (...args: any[]): Fun<any> => {
     };
   };
   
-  export const createStructuredSelector = (obj: any): Fun<any> => {
+  export const createStructuredSelector = <T>(obj: Dictionary<Function>): Fun<T> => {
     if (!obj) {
       throw new TypeError(eError.InvalidArguments);
     }
   
-    return (data: any) => Object.keys(obj).reduce((memo: any, key: string) => {
+    return (data: any): T => Object.keys(obj).reduce((memo: any, key: string) => {
       const fn = obj[key];
   
       if (!isFunction(fn)) {

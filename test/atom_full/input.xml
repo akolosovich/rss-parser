@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <id>channel-id</id>
+    <title>channel-title</title>
+    <updated>2021-01-09T16:17:17+00:00</updated>
+    <subtitle>channel-subtitle</subtitle>
+    <category term="channel-technology-term-1" label="channel-technology-lable-1" />
+    <category term="channel-technology-term-2" label="channel-technology-lable-2" />
+    <link rel="self" href="https://channel-link-self" type="application/atom+xml" />
+    <link rel="alternate" href="https://channel-link-self-alternate" type="text/html" />
+    <icon>https://channel-icon-url</icon>
+    <logo>https://channel-logo.png</logo>
+    <generator uri="/channel-generator-uri" version="1.0">channel-generator-text</generator>
+    <rights>© channel-rights</rights>
+    <author>
+        <name>channel-author-name</name>
+        <email>channel_author@example.com</email>
+        <uri>http://channel-author-uri</uri>
+    </author>
+    <entry>
+        <id>title</id>
+        <title>title</title>
+    </entry>
+    <entry>
+        <id>updated</id>
+        <updated>2003-12-13T18:30:02-05:00</updated>
+    </entry>
+    <entry>
+        <id>published</id>
+        <published>2003-12-13T09:17:51-08:00</published>
+    </entry>
+    <entry>
+        <id>summary</id>
+        <summary>some summary</summary>
+    </entry>
+    <entry>
+        <id>content</id>
+        <content>some content</content>
+    </entry>
+    <entry>
+        <id>rights</id>
+        <rights type="html">&amp;copy; 2005 John Doe</rights>
+    </entry>
+    <entry>
+        <id>source</id>
+        <source>
+            <id>http://source_id/</id>
+            <title>source_title</title>
+            <updated>2003-12-13T18:30:02Z</updated>
+        </source>
+    </entry>
+    <entry>
+        <id>one_author</id>
+        <author>
+            <name>one_author_name</name>
+            <email>one_author_email@mail.com</email>
+            <uri>http://one_author_uri</uri>
+        </author>
+    </entry>
+    <entry>
+        <id>multiple_authors</id>
+        <author>
+            <name>multiple_authors_name_1</name>
+            <email>multiple_authors_email_1@mail.com</email>
+            <uri>http://multiple_authors_uri_1</uri>
+        </author>
+        <author>
+            <name>multiple_authors_name_2</name>
+            <email>multiple_authors_email_2@mail.com</email>
+            <uri>http://multiple_authors_uri_2</uri>
+        </author>
+    </entry>
+    <entry>
+        <id>one_link</id>
+        <link href="https://one_link_link_href" rel="alternate" />
+    </entry>
+    <entry>
+        <id>multiple_links</id>
+        <link href="https://multiple_links_link_href_1" rel="alternate" />
+        <link href="https://multiple_links_link_href_2" rel="self" />
+    </entry>
+    <entry>
+        <id>one_category</id>
+        <category term="one_category_term_1" label="one_category_label_1" scheme="http://some_scheme" />
+    </entry>
+    <entry>
+        <id>multiple_categories</id>
+        <category term="multiple_categories_term_1" label="multiple_categories_label_1" />
+        <category term="multiple_categories_term_2" label="multiple_categories_label_2" />
+    </entry>
+    <entry>
+        <id>one_contributor</id>
+        <contributor>
+            <name>one_contributor_name</name>
+            <email>one_contributor_email@mail.com</email>
+            <uri>http://one_contributor_uri</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <id>multiple_contributors</id>
+        <contributor>
+            <name>multiple_contributors_name_1</name>
+            <email>multiple_contributors_email_1@mail.com</email>
+            <uri>http://multiple_contributors_uri_1</uri>
+        </contributor>
+        <contributor>
+            <name>multiple_contributors_name_2</name>
+            <email>multiple_contributors_email_2@mail.com</email>
+            <uri>http://multiple_contributors_uri_2</uri>
+        </contributor>
+    </entry>
+</feed>

@@ -1,5 +1,4 @@
 import { 
-    Fun, 
     MediaCredit, 
     MediaTextData, 
     MediaCopyright, 
@@ -37,66 +36,66 @@ import {
     getPropRole,
     getPropScheme,
     getPropLabel,
-} from "./common_selectors";
+} from "./props_selectors";
 
-export const selectMediaTitle: Fun<MediaTextData> = createStructuredSelector({
+export const selectMediaTitle = createStructuredSelector<MediaTextData>({
     value: getPropText,
     type: getPropType,
 });
 
-export const getMediaTitle: Fun<MediaTextData> = flow(
+export const getMediaTitle = flow<MediaTextData>(
     get('media:title'),
     (data: any) => data ? selectMediaTitle(data) : null,
 );
 
-export const selectMediaDescription: Fun<MediaTextData> = createStructuredSelector({
+export const selectMediaDescription = createStructuredSelector<MediaTextData>({
     value: getPropText,
     type: getPropType,
 });
 
-export const getMediaDescription: Fun<MediaTextData> = flow(
+export const getMediaDescription = flow<MediaTextData>(
     get('media:description'),
     (data: any) => data ? selectMediaDescription(data) : null,
 );
 
-export const selectMediaThumbnail: Fun<MediaThumbnail> = createStructuredSelector({
+export const selectMediaThumbnail = createStructuredSelector<MediaThumbnail>({
     url: getPropUrl,
     width: getPropWidth,
     height: getPropHeight,
     time: getPropTime,
 });
 
-export const getMediaThumbnail: Fun<MediaThumbnail> = flow(
+export const getMediaThumbnail = flow<MediaThumbnail>(
     get('media:thumbnail'),
     (data: any) => data ? selectMediaThumbnail(data) : null,
 );
 
-export const selectCredit: Fun<MediaCredit> = createStructuredSelector({
+export const selectCredit = createStructuredSelector<MediaCredit>({
     value: getPropText,
     role: getPropRole,
     scheme: getPropScheme,
 });
 
-export const getCredit: Fun<MediaCredit> = flow(
+export const getCredit = flow<MediaCredit>(
     get('media:credit'),
     (data: any) => data ? selectCredit(data) : null,
 );
 
-export const selectCopyright: Fun<MediaCopyright> = createStructuredSelector({
+export const selectCopyright = createStructuredSelector<MediaCopyright>({
     url: getPropUrl,
 });
 
-export const getCopyright: Fun<MediaCopyright> = (data: any) => data 
+export const getCopyright = (data: any) => data 
     ? selectCopyright(data) 
     : null;
 
-export const selectCategory: Fun<MediaCategory> = createStructuredSelector({
+export const selectCategory = createStructuredSelector<MediaCategory>({
     value: getPropText,
     scheme: getPropScheme,
     label: getPropLabel,
 });
 
-export const getCategories: Fun<MediaCategory[]> = flow(
+export const getCategories = flow<MediaCategory[]>(
     get('media:category'),
     (data: any) => isArray(data) ? data : [data],
     map((element: any) => {
@@ -117,7 +116,7 @@ export const getCategories: Fun<MediaCategory[]> = flow(
     filter((element: any) => element),
 );
 
-export const selectMediaContent: Fun<MediaContent> = createStructuredSelector({
+export const selectMediaContent = createStructuredSelector<MediaContent>({
     title: getMediaTitle,
     description: getMediaDescription,
     thumbnail: getMediaThumbnail,
@@ -140,7 +139,7 @@ export const selectMediaContent: Fun<MediaContent> = createStructuredSelector({
     lang: getPropLang,
 });
 
-export const getMediaContent: Fun<MediaContent> = flow(
+export const getMediaContent = flow<MediaContent>(
     get('media:content'),
     (data: any) => data ? selectMediaContent(data) : null,
 );

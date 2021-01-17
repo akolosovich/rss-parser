@@ -1,79 +1,162 @@
 {
-  "version": "2.0",
+  "id": null,
   "title": "The Daily",
+  "version": "2.0",
   "description": "<p>some html text</p>",
   "language": "en",
   "links": [
     {
+      "href": "https://www.nytimes.com/the-daily",
       "rel": "alternate",
-      "url": "https://www.nytimes.com/the-daily"
+      "type": null,
+      "hreflang": null,
+      "title": null,
+      "length": 0
     }
   ],
   "image": {
-    "link": "http://channel-image-link",
     "url": "http://channel-image.png",
     "title": "channel image title",
+    "link": "http://channel-image-link",
+    "description": "channel-image-description",
     "height": 114,
     "width": 114
   },
-  "managingEditor": "editor@example.com (The Example)",
-  "webMaster": "webmaster@example.com (The Example)",
+  "managingEditor": {
+    "name": "The Example",
+    "email": "editor@example.com",
+    "uri": null
+  },
+  "webMaster": {
+    "name": "The Example",
+    "email": "webmaster@example.com",
+    "uri": null
+  },
+  "authors": [],
+  "contributors": [],
+  "updatedOn": "Sat, 01 Jan 2021 16:39:00 GMT",
   "publishedOn": "Sat, 02 Jan 2021 16:39:00 GMT",
-  "lastBuildOn": "Sat, 01 Jan 2021 16:39:00 GMT",
   "categories": [
-    "news"
-  ],
-  "items": [
     {
-      "title": "Some title",
-      "description": "Yeap, it's a text",
-      "content": "Yeap, it's a text",
-      "links": [
-        {
-          "rel": "alternate",
-          "url": "https://www.nytimes.com/2017/05/18/podcasts/the-daily/robert-mueller-rod-rosenstein.html"
-        }
-      ],
-      "guid": {
+      "value": "news",
+      "scheme": null,
+      "label": null,
+      "domain": null
+    }
+  ],
+  "entries": [
+    {
+      "id": {
         "value": "gid://art19-episode-locator/V0/3yEGhoUQ-NUtPe0mqaqhp2rJwOwJq8Hy5ALhrrAf0Yo",
         "isPermaLink": true
       },
-      "categories": [
-        "news",
-        "funny"
-      ],
-      "enclosure": {
-        "url": "https://dts.podtrac.com/redirect.mp3/chtbl.com/track/8DB4DB/rss.art19.com/episodes/8ded3a5c-5959-4593-8639-e7c0d3522366.mp3",
-        "type": "audio/mpeg",
-        "length": 20938919
+      "title": {
+        "value": "Some title",
+        "type": "html"
       },
+      "description": {
+        "value": "Yeap, it's a text",
+        "type": "html"
+      },
+      "updatedOn": null,
       "publishedOn": "Sat, 03 Jan 2021 17:39:00 GMT",
+      "copyright": null,
+      "links": [
+        {
+          "href": "https://www.nytimes.com/2017/05/18/podcasts/the-daily/robert-mueller-rod-rosenstein.html",
+          "rel": "alternate",
+          "type": null,
+          "hreflang": null,
+          "title": null,
+          "length": 0
+        }
+      ],
+      "categories": [
+        {
+          "value": "news",
+          "scheme": null,
+          "label": null,
+          "domain": null
+        },
+        {
+          "value": "funny",
+          "scheme": null,
+          "label": null,
+          "domain": null
+        }
+      ],
       "source": {
+        "id": null,
         "title": "Education News",
-        "url": "http://www.nasa.gov/rss/dyn/educationnews.rss"
+        "url": "http://www.nasa.gov/rss/dyn/educationnews.rss",
+        "updatedOn": null
       },
+      "enclosures": [
+        {
+          "url": "https://dts.podtrac.com/redirect.mp3/chtbl.com/track/8DB4DB/rss.art19.com/episodes/8ded3a5c-5959-4593-8639-e7c0d3522366.mp3",
+          "type": "audio/mpeg",
+          "length": 20938919
+        }
+      ],
+      "content": {
+        "value": "Yeap, it's a text",
+        "type": "html"
+      },
+      "authors": [
+        {
+          "name": "1619",
+          "email": "thedaily@nytimes.com",
+          "uri": null
+        }
+      ],
+      "contributors": [],
       "media": null
     },
     {
-      "title": "Fördermittel des Bundes werden oft später abgerufen",
-      "description": "Haushalt/Antwort Dass Fördermittel von den Kommunen oft mit Verzögerung abgerufen werden, erklärt die Regierung in einer Antwort auf eine FDP-Anfrage damit, dass oft erst der Abschluss von Maßnahmen abgewartet werde.",
-      "content": null,
-      "links": [
-        {
-          "rel": "alternate",
-          "url": "https://www.bundestag.de/presse/hib/815100-815100"
-        }
-      ],
-      "guid": {
+      "id": {
         "value": "https://www.bundestag.de/presse/hib/815100-815100",
         "isPermaLink": false
       },
-      "categories": [
-        "Haushalt",
-        "Antwort"
+      "title": {
+        "value": "Fördermittel des Bundes werden oft später abgerufen",
+        "type": "html"
+      },
+      "description": {
+        "value": "Haushalt/Antwort Dass Fördermittel von den Kommunen oft mit Verzögerung abgerufen werden, erklärt die Regierung in einer Antwort auf eine FDP-Anfrage damit, dass oft erst der Abschluss von Maßnahmen abgewartet werde.",
+        "type": "html"
+      },
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [
+        {
+          "href": "https://www.bundestag.de/presse/hib/815100-815100",
+          "rel": "alternate",
+          "type": null,
+          "hreflang": null,
+          "title": null,
+          "length": 0
+        }
       ],
-      "enclosure": null,
+      "categories": [
+        {
+          "value": "Haushalt",
+          "scheme": null,
+          "label": null,
+          "domain": null
+        },
+        {
+          "value": "Antwort",
+          "scheme": null,
+          "label": null,
+          "domain": null
+        }
+      ],
       "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
       "media": null
     }
   ]

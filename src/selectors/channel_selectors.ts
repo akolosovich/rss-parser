@@ -1,44 +1,89 @@
-import { Channel, Fun, Image } from '../dtos';
-import { createStructuredSelector, flow, get, getOrNull, trimOrNull } from '../helpers';
-import { getItems } from './channel_item_selectors';
+import { 
+  Channel, 
+  Image, 
+  Person,
+  Nullable, 
+} from '../dtos';
+import { 
+  createSelector, 
+  createStructuredSelector, 
+  flow, 
+  get, 
+  getOrNull, 
+  isString, 
+  trimOrNull 
+} from '../helpers';
+import { 
+  getEntries
+} from './entry_selectors';
 import {
-  getTitle,
-  getDescription,
   getLinks,
   getCategories,
   getPublishedOn,
-  getPropVersion,
+  getPerson,
+  getUpdatedOn,
+  getGuid,
+  getAuthors,
+  getContributors,
 } from './common_selectors';
+import { 
+  getPropVersion
+} from './props_selectors';
 
-const getLanguage = flow(
+export const getTitle = flow<string>(
+  get('title'),
+  (title: any) => {
+    if (!title) {
+      return null;
+    }
+    
+    return isString(title) ? title : null;
+  },
+);
+
+export const getDescription = createSelector<Nullable<string>>(
+  get('description'),
+  get('subtitle'),
+  (description: any, subtitle: any) => {
+    const value = description || subtitle;
+
+    if (!value) {
+      return null;
+    }
+
+    if (isString(value)) {
+      return value;
+    }
+
+    return value.toString();
+  },
+);
+
+const getLanguage = flow<string>(
   get('language'),
   trimOrNull,
 );
 
-const getManagingEditor = flow(
+const getManagingEditor = flow<Person>(
   get('managingEditor'),
-  trimOrNull,
+  getPerson,
 );
 
-const getWebMaster = flow(
+const getWebMaster = flow<Person>(
   get('webMaster'),
-  trimOrNull,
+  getPerson,
 );
 
-const getLastBuildDate = flow(
-  get('lastBuildDate'),
-  trimOrNull,
-);
-
-const selectImage = createStructuredSelector({
-  link: getOrNull('link'),
+const selectImage = createStructuredSelector<Image>({
   url: getOrNull('url'),
   title: getOrNull('title'),
+  link: getOrNull('link'),
+  description: getOrNull('description'),
   height: getOrNull('height'),
   width: getOrNull('width'),
 });
 
-const getImage: Fun<Image> = flow(
+const getImage = flow<Image>(
   get('image'),
   (data: any) => data ? selectImage(data): null,
 );
@@ -48,17 +93,20 @@ export const getChannel = (content: any): Channel => {
   const channel = root.channel || root;
 
   return {
-    version: getPropVersion(root),
+    id: getGuid(channel),
     title: getTitle(channel),
+    version: getPropVersion(root),
     description: getDescription(channel),
     language: getLanguage(channel),
     links: getLinks(channel),
     image: getImage(channel),
     managingEditor: getManagingEditor(channel),
     webMaster: getWebMaster(channel),
+    authors: getAuthors(channel),
+    contributors: getContributors(channel),
+    updatedOn: getUpdatedOn(channel),
     publishedOn: getPublishedOn(channel),
-    lastBuildOn: getLastBuildDate(channel),
     categories: getCategories(channel),
-    items: getItems(channel),
+    entries: getEntries(channel),
   };
 };

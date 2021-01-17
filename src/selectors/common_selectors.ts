@@ -1,87 +1,66 @@
-import { Nullable, Link, Fun } from '../dtos';
+import { 
+  Link, 
+  eLinkRel, 
+  Category, 
+  eTextType, 
+  Text, 
+  Person,
+  Guid
+} from '../dtos';
 import {
   isString,
   isArray,
   flow,
   get,
-  trimOrNull,
-  getOrNull,
-  toInteger,
-  toBoolean,
+  toDate,
+  createStructuredSelector,
   createSelector,
+  getOrNull,
+  trim,
 } from '../helpers';
+import {
+  getPropDomain,
+  getPropHref,
+  getPropHreflang,
+  getPropIsPermaLink,
+  getPropLabel,
+  getPropLength,
+  getPropRel,
+  getPropScheme,
+  getPropTerm,
+  getPropText, 
+  getPropTitle, 
+  getPropType,
+} from './props_selectors';
 
-export const getPropVersion: Fun<string> = get('@_version');
-export const getPropTerm = get('@_term');
-export const getPropUrl: Fun<string> = get('@_url');
-export const getPropType: Fun<string> = get('@_type');
-export const getPropRole: Fun<string> = get('@_role');
-export const getPropScheme: Fun<string> = get('@_scheme');
-export const getPropLength: Fun<number> = flow(
-  get('@_length'),
-  toInteger,
-);
-export const getPropHref: Fun<string> = get('@_href');
-export const getPropRel: Fun<string> = get('@_rel');
-export const getPropText: Fun<string> = flow(
-  get('#text'),
-  trimOrNull,
-);
-export const getPropFileSize: Fun<number> = flow(
-  get('@_fileSize'),
-  toInteger,
-);
-export const getPropMedium: Fun<string> = get('@_medium');
-export const getPropIsDefault: Fun<boolean> = flow(
-  get('@_isDefault'),
-  toBoolean,
-);
-export const getPropExpression: Fun<string> = get('@_expression');
-export const getPropBitrate: Fun<number> = flow(
-  get('@_bitrate'),
-  toInteger,
-);
-export const getPropFramerate: Fun<number> = flow(
-  get('@_framerate'),
-  toInteger,
-);
-export const getPropSamplingrate: Fun<number> = flow(
-  get('@_samplingrate'),
-  toInteger,
-);
-export const getPropChannels: Fun<number> = flow(
-  get('@_channels'),
-  toInteger,
-);
-export const getPropDuration: Fun<number> = flow(
-  get('@_duration'),
-  toInteger,
-);
-export const getPropHeight: Fun<number> = flow(
-  get('@_height'),
-  toInteger,
-);
-export const getPropWidth: Fun<number> = flow(
-  get('@_width'),
-  toInteger,
-);
-export const getPropTime: Fun<string> = get('@_time');
-export const getPropLang: Fun<string> = get('@_lang');
-export const getPropLabel: Fun<string> = get('@_label');
-export const getPropIsPermaLink: Fun<boolean> = flow(
-  get('@_isPermaLink'),
-  toBoolean,
-);
+export const selectText = createStructuredSelector<Text>({
+  value: getPropText,
+  type: getPropType,
+});
 
-export const getTitle: Fun<string> = flow(
-  get('title'),
-  trimOrNull,
-);
-export const getDescription: Fun<string> = createSelector(
-  get('description'),
-  get('subtitle'),
-  (a: any, b: any) => trimOrNull(a || b),
-);
+export const getText = (data: any): Text => {
+  if (!data) {
+    return null;
+  }
+
+  if (isString(data)) {
+    return {
+      value: data.trim(),
+      type: eTextType.html,
+    };
+  }
+
+  return selectText(data);
+};
+
+export const selectLink = createStructuredSelector<Link>({
+  href: getPropHref,
+  rel: getPropRel,
+  type: getPropType,
+  hreflang: getPropHreflang,
+  title: getPropTitle,
+  length: getPropLength,
+});
 
 export const getLinks = (obj: any): Link[] => {
   if (!obj || !obj.link) {
@@ -91,35 +70,38 @@ export const getLinks = (obj: any): Link[] => {
 
   if (isString(link)) {
     return [
-      {
-        rel: 'alternate',
-        url: link,
-      },
+      selectLink({
+        '@_href': link,
+        '@_rel': eLinkRel.alternate,
+      }),
     ];
   }
+
   if (isArray(link)) {
-    return link.map((x: any) => ({
-      rel: getPropRel(x),
-      url: getPropHref(x),
-    }));
+    return link.map(selectLink);
   }
 
-  return [];
+  return [selectLink(link)];
 };
 
-export const getCategory = (obj: any): Nullable<string> => {
+export const selectCategory = createStructuredSelector<Category>({
+  value: (data: any) => getPropText(data) || getPropTerm(data),
+  scheme: getPropScheme,
+  label: getPropLabel,
+  domain: getPropDomain,
+});
+
+export const getCategory = (obj: any): Category => {
   if (!obj) {
     return null;
   }
 
-  if (typeof obj === 'string') {
-    return obj;
-  }
-  
-  return getPropTerm(obj) || null;
+  const category = isString(obj) ? { '@_term': obj } : obj;
+
+  return selectCategory(category);
 };
 
-export const getCategories = (obj: any): Nullable<string>[] => {
+export const getCategories = (obj: any): Category[] => {
   if (!obj || !obj.category) {
     return [];
   }
@@ -139,4 +121,94 @@ export const getCategories = (obj: any): Nullable<string>[] => {
   return [];
 };
 
-export const getPublishedOn = getOrNull('pubDate');
+export const getPublishedOn = createSelector<Date>(
+  get('pubDate'),
+  get('published'),
+  (a: any, b: any) => toDate(a || b),
+);
+
+export const getUpdatedOn = createSelector<Date>(
+  get('updated'),
+  get('lastBuildDate'),
+  (a: any, b: any) => toDate(a || b),
+);
+
+export const getRights = createSelector<Text>(
+  get('rights'),
+  get('copyright'),
+  (rights: any, copyright: any) => getText(rights || copyright),
+);
+
+export const selectPerson = createStructuredSelector<Person>({
+  name: getOrNull('name'),
+  email: getOrNull('email'),
+  uri: getOrNull('uri'),
+});
+
+export const getPerson = (data: any): Person => {
+  if (!data) {
+    return null;
+  }
+
+  if (isString(data)) {
+    const values = data.match(/(.+?)\((.+?)\)/);
+
+    if (values && values.length === 3) {
+      return {
+        name: trim(values[2]),
+        email: trim(values[1]),
+        uri: null,
+      };  
+    }
+
+    return {
+      name: data,
+      email: null,
+      uri: null,
+    };
+  }
+
+  return selectPerson(data);
+};
+
+export const getPersons = (data: any): Person[] => {
+  if (!data) {
+    return [];
+  }
+
+  const arr = isArray(data) ? data : [data];
+
+  return arr.map(getPerson).filter((person: any) => person);
+};
+
+export const selectGuid = createStructuredSelector<Guid>({
+  value: getPropText,
+  isPermaLink: getPropIsPermaLink,
+});
+
+export const getGuid = createSelector<Guid>(
+  get('guid'),
+  get('id'),
+  (guid: any, id: any) => {
+    const value = guid || id;
+
+    if (isString(value)) {
+      return {
+        value: value,
+        isPermaLink: false,
+      };
+    }
+
+    return value ? selectGuid(value) : null;
+  }
+);
+
+export const getAuthors = flow<Person[]>(
+  get('author'),
+  getPersons,
+);
+
+export const getContributors = flow<Person[]>(
+  get('contributor'),
+  getPersons,
+);

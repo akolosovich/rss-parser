@@ -19,5 +19,7 @@ const run = (directory: string, override = false) => it(directory, () => {
 
 describe('rssParser', () => {
   run('general');
+  run('atom_full');
   run('media');
+  run('dtf_ru');
 });

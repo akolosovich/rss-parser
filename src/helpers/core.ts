@@ -12,8 +12,12 @@ export const trim = (str: string): string => {
 
   return '';
 };
-export const trimOrNull = (str: string) => (str ? trim(str) : null);
-export const flow = (...args: any[]) => (data: any) => {
+export const trimOrNull = (str: string) => {
+  const value = trim(str);
+
+  return value || null;
+};
+export const flow = <T>(...args: Function[]) => (data: any): T => {
   let result: any = null;
 
   for (let i = 0; i < args.length; i++) {
@@ -28,6 +32,7 @@ export const flow = (...args: any[]) => (data: any) => {
 
   return result;
 };
+
 export const map = (fn: any) => (array: any[]): any[] => array.map(fn);
 export const filter = (fn: any) => (array: any[]): any[] => array.filter(fn);
 export const getOr = (defaultValue: any) => (field: string) => (obj: any) => (obj ? obj[field] : defaultValue);
@@ -39,3 +44,4 @@ export const toInteger = (value: any): number => {
   return Number.isInteger(result) ? result : 0;
 };
 export const toBoolean = (value: any) => !!value;
+export const toDate = (value: any) => (value || null);

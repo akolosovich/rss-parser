@@ -57,7 +57,7 @@ describe('createSelector', () => {
         expect(test(1)).toBe('2');
     });
     it('with 2+ arguments', () => {
-        const test: any = createSelector(
+        const test = createSelector(
             plusOne,
             plusOne,
             toString,
@@ -66,16 +66,16 @@ describe('createSelector', () => {
         expect(test(1)).toBe('2,2');
     });
     it('not a function: 1 arguments', () => {
-        const test: any = createSelector(
-            1,
+        const test = createSelector(
+            1 as any,
         );
 
         expect(() => test(1)).toThrowError(eError.NotAFunction);
     });
     it('not a function: 1+ arguments', () => {
-        const test: any = createSelector(
-            1,
-            2,
+        const test = createSelector(
+            1 as any,
+            2 as any,
         );
 
         expect(() => test(1)).toThrowError(eError.NotAFunction);
