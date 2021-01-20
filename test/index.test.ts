@@ -2,11 +2,11 @@ import { readFileSync, writeFileSync } from 'fs';
 
 import { rssParser } from '../src';
 
-const run = (directory: string, override = false) => it(directory, () => {
+const run = (directory: string, override = false) => it(directory,  async () => {
   const dirName = `${__dirname}/${directory}`;
   const content = readFileSync(`${dirName}/input.xml`, 'utf-8');
   const expected = readFileSync(`${dirName}/expected.json`, 'utf-8');
-
+  
   const result = rssParser.parseString(content);
   const resultString = JSON.stringify(result, null, 2);
 
@@ -18,10 +18,10 @@ const run = (directory: string, override = false) => it(directory, () => {
 });
 
 describe('rssParser', () => {
-  run('general', true);
-  run('atom_full', true);
-  run('media', true);
-  run('dtf_ru', true);
-  run('nytimes_com', true);
-  run('abcnews.go.com', true);
+  run('general');
+  run('atom_full');
+  run('media');
+  run('dtf_ru');
+  run('nytimes_com');
+  run('abcnews.go.com');
 });
