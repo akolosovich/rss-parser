@@ -29,13 +29,16 @@ export type MediaCategory = null | {
     label: Nullable<string>
 }
 
-export type MediaContent = null | {
+export type MediaBase = null | {
     title: MediaTextData
     description: MediaTextData
-    thumbnail: MediaThumbnail
+    thumbnails: MediaThumbnail
     categories: MediaCategory[]
     credit: MediaCredit
     copyright: MediaCopyright
+}
+
+export type MediaContent = null | MediaBase & {
     url: Nullable<string>,
     fileSize: number
     type: Nullable<string>
@@ -52,7 +55,6 @@ export type MediaContent = null | {
     lang: Nullable<string>
 }
 
-export type Media = null | {
+export type Media = null | MediaBase & {
     content: MediaContent
-    categories: MediaCategory[]
-}
+};

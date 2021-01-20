@@ -1,0 +1,35 @@
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:abcnews="http://abcnews.com/content/" version="2.0">
+    <channel>
+        <title>ABC News: Top Stories</title>
+        <link>http://abcnews.go.com/</link>
+        <description/>
+        <image>
+            <title>ABC News: Top Stories</title>
+            <url>https://s.abcnews.com/images/site/abcnews_google_rss_logo.png</url>
+            <link>http://abcnews.go.com/</link>
+        </image>
+        <item>
+            <media:thumbnail url="https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_4x3t_384.jpg" width="384" height="288"/>
+            <media:thumbnail url="https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_4x3t_144.jpg" width="144" height="108"/>
+            <media:thumbnail url="https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_4x3t_384.jpg" width="384" height="288"/>
+            <media:thumbnail url="https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_16x9t_240.jpg" width="240" height="135"/>
+            <media:thumbnail url="https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_4x3_608.jpg" width="608" height="456"/>
+            <media:thumbnail url="https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_16x9_992.jpg" width="992" height="558"/>
+            <media:keywords>1</media:keywords>
+            <title>
+                <![CDATA[ 4th victim dies after gunman's attacks in Chicago, suburbs ]]>
+            </title>
+            <link>
+                <![CDATA[ https://abcnews.go.com/US/wireStory/4th-victim-dies-gunmans-attacks-chicago-suburbs-75310528 ]]>
+            </link>
+            <guid>
+                <![CDATA[ https://abcnews.go.com/US/wireStory/4th-victim-dies-gunmans-attacks-chicago-suburbs-75310528 ]]>
+            </guid>
+            <pubDate>Sun, 17 Jan 2021 14:05:13 -0500</pubDate>
+            <description>
+                <![CDATA[ A 61-year-old woman is the fourth person to die from the shootings this month. ]]>
+            </description>
+            <category>US</category>
+        </item>
+    </channel>
+</rss>

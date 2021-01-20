@@ -1,0 +1,41 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+    <channel>
+        <title>NYT > Top Stories</title>
+        <link>https://www.nytimes.com</link>
+        <atom:link href="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" rel="self" type="application/rss+xml"/>
+        <description/>
+        <language>en-us</language>
+        <copyright>Copyright 2021 The New York Times Company</copyright>
+        <lastBuildDate>Sun, 17 Jan 2021 18:53:59 +0000</lastBuildDate>
+        <pubDate>Sun, 17 Jan 2021 18:53:59 +0000</pubDate>
+        <image>
+            <title>NYT > Top Stories</title>
+            <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+            <link>https://www.nytimes.com</link>
+        </image>
+        <item>
+            <title>Prospect of Pardons in Final Days Fuels Market to Buy Access to Trump</title>
+            <link>https://www.nytimes.com/2021/01/17/us/politics/trump-pardons.html</link>
+            <guid isPermaLink="true">https://www.nytimes.com/2021/01/17/us/politics/trump-pardons.html</guid>
+            <description>The president’s allies have collected tens of thousands of dollars — and potentially much more — from people seeking pardons.</description>
+            <dc:creator>Michael S. Schmidt and Kenneth P. Vogel</dc:creator>
+            <pubDate>Sun, 17 Jan 2021 16:50:29 +0000</pubDate>
+            <category domain="http://www.nytimes.com/namespaces/keywords/des">Amnesties, Commutations and Pardons</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/des">Legal Profession</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/des">Lobbying and Lobbyists</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/des">Corruption (Institutional)</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Justice Department</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Dowd, John M</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Giuliani, Rudolph W</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kiriakou, John C</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Walters, William T</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Tolman, Brett</category>
+            <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Giorno, Karen</category>
+            <media:content height="151" medium="image" url="https://static01.nyt.com/images/2020/12/17/us/politics/17dc-pardons1/17dc-pardons1-moth-v2.jpg" width="151"/>
+            <media:credit>Samuel Corum for The New York Times</media:credit>
+            <media:description>The brisk market for pardons reflects the access peddling that has defined the Trump presidency as well as President Trump’s unorthodox approach to exercising unchecked presidential clemency powers.</media:description>
+        </item>
+    </channel>
+</rss>

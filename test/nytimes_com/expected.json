@@ -1,0 +1,180 @@
+{
+  "id": null,
+  "title": "NYT > Top Stories",
+  "version": "2.0",
+  "description": null,
+  "language": "en-us",
+  "links": [
+    {
+      "href": "https://www.nytimes.com",
+      "rel": "alternate",
+      "type": null,
+      "hreflang": null,
+      "title": null,
+      "length": 0
+    }
+  ],
+  "image": {
+    "url": "https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png",
+    "title": "NYT > Top Stories",
+    "link": "https://www.nytimes.com"
+  },
+  "managingEditor": null,
+  "webMaster": null,
+  "authors": [],
+  "contributors": [],
+  "updatedOn": "Sun, 17 Jan 2021 18:53:59 +0000",
+  "publishedOn": "Sun, 17 Jan 2021 18:53:59 +0000",
+  "categories": [],
+  "entries": [
+    {
+      "id": {
+        "value": "https://www.nytimes.com/2021/01/17/us/politics/trump-pardons.html",
+        "isPermaLink": true
+      },
+      "title": {
+        "value": "Prospect of Pardons in Final Days Fuels Market to Buy Access to Trump",
+        "type": "html"
+      },
+      "description": {
+        "value": "The president’s allies have collected tens of thousands of dollars — and potentially much more — from people seeking pardons.",
+        "type": "html"
+      },
+      "updatedOn": null,
+      "publishedOn": "Sun, 17 Jan 2021 16:50:29 +0000",
+      "copyright": null,
+      "links": [
+        {
+          "href": "https://www.nytimes.com/2021/01/17/us/politics/trump-pardons.html",
+          "rel": "alternate",
+          "type": null,
+          "hreflang": null,
+          "title": null,
+          "length": 0
+        }
+      ],
+      "categories": [
+        {
+          "value": "Amnesties, Commutations and Pardons",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/des"
+        },
+        {
+          "value": "United States Politics and Government",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/des"
+        },
+        {
+          "value": "Legal Profession",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/des"
+        },
+        {
+          "value": "Lobbying and Lobbyists",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/des"
+        },
+        {
+          "value": "Corruption (Institutional)",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/des"
+        },
+        {
+          "value": "Trump, Donald J",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per"
+        },
+        {
+          "value": "Justice Department",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/nyt_org"
+        },
+        {
+          "value": "Dowd, John M",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per"
+        },
+        {
+          "value": "Giuliani, Rudolph W",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per"
+        },
+        {
+          "value": "Kiriakou, John C",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per"
+        },
+        {
+          "value": "Walters, William T",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per"
+        },
+        {
+          "value": "Tolman, Brett",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per"
+        },
+        {
+          "value": "Giorno, Karen",
+          "scheme": null,
+          "label": null,
+          "domain": "http://www.nytimes.com/namespaces/keywords/nyt_per"
+        }
+      ],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": {
+        "title": null,
+        "description": {
+          "value": "The brisk market for pardons reflects the access peddling that has defined the Trump presidency as well as President Trump’s unorthodox approach to exercising unchecked presidential clemency powers.",
+          "type": null
+        },
+        "thumbnails": [],
+        "categories": [],
+        "credit": {
+          "value": "Samuel Corum for The New York Times",
+          "role": null,
+          "scheme": null
+        },
+        "copyright": null,
+        "content": {
+          "title": null,
+          "description": null,
+          "thumbnails": [],
+          "categories": [],
+          "credit": null,
+          "copyright": null,
+          "url": "https://static01.nyt.com/images/2020/12/17/us/politics/17dc-pardons1/17dc-pardons1-moth-v2.jpg",
+          "fileSize": 0,
+          "type": null,
+          "medium": "image",
+          "isDefault": false,
+          "expression": null,
+          "bitrate": 0,
+          "framerate": 0,
+          "samplingrate": 0,
+          "channels": 0,
+          "duration": 0,
+          "height": 151,
+          "width": 151,
+          "lang": null
+        }
+      }
+    }
+  ]
+}

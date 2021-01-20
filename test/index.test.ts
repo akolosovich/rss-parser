@@ -18,8 +18,10 @@ const run = (directory: string, override = false) => it(directory, () => {
 });
 
 describe('rssParser', () => {
-  run('general');
-  run('atom_full');
-  run('media');
-  run('dtf_ru');
+  run('general', true);
+  run('atom_full', true);
+  run('media', true);
+  run('dtf_ru', true);
+  run('nytimes_com', true);
+  run('abcnews.go.com', true);
 });

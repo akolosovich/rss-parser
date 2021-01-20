@@ -1,0 +1,117 @@
+{
+  "id": null,
+  "title": "ABC News: Top Stories",
+  "version": "2.0",
+  "description": null,
+  "language": null,
+  "links": [
+    {
+      "href": "http://abcnews.go.com/",
+      "rel": "alternate",
+      "type": null,
+      "hreflang": null,
+      "title": null,
+      "length": 0
+    }
+  ],
+  "image": {
+    "url": "https://s.abcnews.com/images/site/abcnews_google_rss_logo.png",
+    "title": "ABC News: Top Stories",
+    "link": "http://abcnews.go.com/"
+  },
+  "managingEditor": null,
+  "webMaster": null,
+  "authors": [],
+  "contributors": [],
+  "updatedOn": null,
+  "publishedOn": null,
+  "categories": [],
+  "entries": [
+    {
+      "id": {
+        "value": " https://abcnews.go.com/US/wireStory/4th-victim-dies-gunmans-attacks-chicago-suburbs-75310528 ",
+        "isPermaLink": false
+      },
+      "title": {
+        "value": "4th victim dies after gunman's attacks in Chicago, suburbs",
+        "type": "html"
+      },
+      "description": {
+        "value": "A 61-year-old woman is the fourth person to die from the shootings this month.",
+        "type": "html"
+      },
+      "updatedOn": null,
+      "publishedOn": "Sun, 17 Jan 2021 14:05:13 -0500",
+      "copyright": null,
+      "links": [
+        {
+          "href": "https://abcnews.go.com/US/wireStory/4th-victim-dies-gunmans-attacks-chicago-suburbs-75310528",
+          "rel": "alternate",
+          "type": null,
+          "hreflang": null,
+          "title": null,
+          "length": 0
+        }
+      ],
+      "categories": [
+        {
+          "value": "US",
+          "scheme": null,
+          "label": null,
+          "domain": null
+        }
+      ],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": {
+        "title": null,
+        "description": null,
+        "thumbnails": [
+          {
+            "url": "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_4x3t_384.jpg",
+            "width": 384,
+            "height": 288,
+            "time": null
+          },
+          {
+            "url": "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_4x3t_144.jpg",
+            "width": 144,
+            "height": 108,
+            "time": null
+          },
+          {
+            "url": "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_4x3t_384.jpg",
+            "width": 384,
+            "height": 288,
+            "time": null
+          },
+          {
+            "url": "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_16x9t_240.jpg",
+            "width": 240,
+            "height": 135,
+            "time": null
+          },
+          {
+            "url": "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_4x3_608.jpg",
+            "width": 608,
+            "height": 456,
+            "time": null
+          },
+          {
+            "url": "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_16x9_992.jpg",
+            "width": 992,
+            "height": 558,
+            "time": null
+          }
+        ],
+        "categories": [],
+        "credit": null,
+        "copyright": null,
+        "content": null
+      }
+    }
+  ]
+}

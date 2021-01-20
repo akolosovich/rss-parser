@@ -35,6 +35,9 @@
       "authors": [],
       "contributors": [],
       "media": {
+        "title": null,
+        "description": null,
+        "thumbnails": [],
         "categories": [
           {
             "value": "item 1 cat 1",
@@ -47,6 +50,8 @@
             "label": null
           }
         ],
+        "credit": null,
+        "copyright": null,
         "content": {
           "title": {
             "value": "item 1 media title",
@@ -56,12 +61,14 @@
             "value": "item 1 media description",
             "type": "plain"
           },
-          "thumbnail": {
-            "url": "http://item-1-media/thumbnail.jpg",
-            "width": 75,
-            "height": 50,
-            "time": "12:05:01.123"
-          },
+          "thumbnails": [
+            {
+              "url": "http://item-1-media/thumbnail.jpg",
+              "width": 75,
+              "height": 50,
+              "time": "12:05:01.123"
+            }
+          ],
           "categories": [],
           "credit": {
             "value": "Tom Johnson",
@@ -69,7 +76,7 @@
             "scheme": "urn:ebu"
           },
           "copyright": {
-            "url": "http://www.foo.com/movie.mov"
+            "url": "https://item-1-media-copyright"
           },
           "url": "http://www.foo.com/movie.mov",
           "fileSize": 12216320,
@@ -106,7 +113,12 @@
       "authors": [],
       "contributors": [],
       "media": {
+        "title": null,
+        "description": null,
+        "thumbnails": [],
         "categories": [],
+        "credit": null,
+        "copyright": null,
         "content": {
           "title": {
             "value": "item-2-media-title",
@@ -116,12 +128,14 @@
             "value": "item-2-media-description",
             "type": "html"
           },
-          "thumbnail": {
-            "url": "http://item-2-media/thumbnail.jpg",
-            "width": 0,
-            "height": 0,
-            "time": null
-          },
+          "thumbnails": [
+            {
+              "url": "http://item-2-media/thumbnail.jpg",
+              "width": 0,
+              "height": 0,
+              "time": null
+            }
+          ],
           "categories": [
             {
               "value": "music/artist/album/song",
@@ -144,9 +158,7 @@
             "role": "author",
             "scheme": "urn:ebu"
           },
-          "copyright": {
-            "url": "http://item-2-media-content.mp4"
-          },
+          "copyright": null,
           "url": "http://item-2-media-content.mp4",
           "fileSize": 7,
           "type": null,
