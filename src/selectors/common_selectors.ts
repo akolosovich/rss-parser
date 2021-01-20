@@ -1,12 +1,4 @@
-import { 
-  Link, 
-  eLinkRel, 
-  Category, 
-  eTextType, 
-  Text, 
-  Person,
-  Guid
-} from '../dtos';
+import { Link, eLinkRel, Category, eTextType, Text, Person, Guid } from '../dtos';
 import {
   isString,
   isArray,
@@ -28,8 +20,8 @@ import {
   getPropRel,
   getPropScheme,
   getPropTerm,
-  getPropText, 
-  getPropTitle, 
+  getPropText,
+  getPropTitle,
   getPropType,
 } from './props_selectors';
 
@@ -121,22 +113,16 @@ export const getCategories = (obj: any): Category[] => {
   return [];
 };
 
-export const getPublishedOn = createSelector<Date>(
-  get('pubDate'),
-  get('published'),
-  (a: any, b: any) => toDate(a || b),
+export const getPublishedOn = createSelector<Date>(get('pubDate'), get('published'), (a: any, b: any) =>
+  toDate(a || b)
 );
 
-export const getUpdatedOn = createSelector<Date>(
-  get('updated'),
-  get('lastBuildDate'),
-  (a: any, b: any) => toDate(a || b),
+export const getUpdatedOn = createSelector<Date>(get('updated'), get('lastBuildDate'), (a: any, b: any) =>
+  toDate(a || b)
 );
 
-export const getRights = createSelector<Text>(
-  get('rights'),
-  get('copyright'),
-  (rights: any, copyright: any) => getText(rights || copyright),
+export const getRights = createSelector<Text>(get('rights'), get('copyright'), (rights: any, copyright: any) =>
+  getText(rights || copyright)
 );
 
 export const selectPerson = createStructuredSelector<Person>({
@@ -158,7 +144,7 @@ export const getPerson = (data: any): Person => {
         name: trim(values[2]),
         email: trim(values[1]),
         uri: null,
-      };  
+      };
     }
 
     return {
@@ -186,29 +172,19 @@ export const selectGuid = createStructuredSelector<Guid>({
   isPermaLink: getPropIsPermaLink,
 });
 
-export const getGuid = createSelector<Guid>(
-  get('guid'),
-  get('id'),
-  (guid: any, id: any) => {
-    const value = guid || id;
+export const getGuid = createSelector<Guid>(get('guid'), get('id'), (guid: any, id: any) => {
+  const value = guid || id;
 
-    if (isString(value)) {
-      return {
-        value: value,
-        isPermaLink: false,
-      };
-    }
-
-    return value ? selectGuid(value) : null;
+  if (isString(value)) {
+    return {
+      value: value,
+      isPermaLink: false,
+    };
   }
-);
 
-export const getAuthors = flow<Person[]>(
-  get('author'),
-  getPersons,
-);
+  return value ? selectGuid(value) : null;
+});
 
-export const getContributors = flow<Person[]>(
-  get('contributor'),
-  getPersons,
-);
+export const getAuthors = flow<Person[]>(get('author'), getPersons);
+
+export const getContributors = flow<Person[]>(get('contributor'), getPersons);

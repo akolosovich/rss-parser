@@ -1,32 +1,18 @@
 import { Nullable } from '../dtos';
-import {
-    flow,
-    get,
-    toInteger,
-    toBoolean,
-    isString,
-} from '../helpers';
+import { flow, get, toInteger, toBoolean, isString } from '../helpers';
 
-export const getPropAsString = (key: string) => flow<Nullable<string>>(
-    get(key),
-    (value: any) => {
-        if (!value) {
-            return null;
-        }
-        if (isString(value)) {
-            return value.trim();
-        }
-        return value.toString();
-    },
-);
-export const getPropAsNumber = (key: string) => flow<number>(
-    get(key),
-    toInteger,
-);
-export const getPropAsBoolean = (key: string) => flow<boolean>(
-    get(key),
-    toBoolean,
-);
+export const getPropAsString = (key: string) =>
+  flow<Nullable<string>>(get(key), (value: any) => {
+    if (!value) {
+      return null;
+    }
+    if (isString(value)) {
+      return value.trim();
+    }
+    return value.toString();
+  });
+export const getPropAsNumber = (key: string) => flow<number>(get(key), toInteger);
+export const getPropAsBoolean = (key: string) => flow<boolean>(get(key), toBoolean);
 export const getPropVersion = getPropAsString('@_version');
 export const getPropTerm = getPropAsString('@_term');
 export const getPropUrl = getPropAsString('@_url');

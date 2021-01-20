@@ -1,21 +1,6 @@
-import { 
-  Channel, 
-  Image, 
-  Person,
-  Nullable, 
-} from '../dtos';
-import { 
-  createSelector, 
-  createStructuredSelector, 
-  flow, 
-  get, 
-  getOrNull, 
-  isString, 
-  trimOrNull 
-} from '../helpers';
-import { 
-  getEntries
-} from './entry_selectors';
+import { Channel, Image, Person, Nullable } from '../dtos';
+import { createSelector, createStructuredSelector, flow, get, getOrNull, isString, trimOrNull } from '../helpers';
+import { getEntries } from './entry_selectors';
 import {
   getLinks,
   getCategories,
@@ -26,20 +11,15 @@ import {
   getAuthors,
   getContributors,
 } from './common_selectors';
-import { 
-  getPropVersion
-} from './props_selectors';
+import { getPropVersion } from './props_selectors';
 
-export const getTitle = flow<string>(
-  get('title'),
-  (title: any) => {
-    if (!title) {
-      return null;
-    }
-    
-    return isString(title) ? title : null;
-  },
-);
+export const getTitle = flow<string>(get('title'), (title: any) => {
+  if (!title) {
+    return null;
+  }
+
+  return isString(title) ? title : null;
+});
 
 export const getDescription = createSelector<Nullable<string>>(
   get('description'),
@@ -56,23 +36,14 @@ export const getDescription = createSelector<Nullable<string>>(
     }
 
     return value.toString();
-  },
+  }
 );
 
-const getLanguage = flow<string>(
-  get('language'),
-  trimOrNull,
-);
+const getLanguage = flow<string>(get('language'), trimOrNull);
 
-const getManagingEditor = flow<Person>(
-  get('managingEditor'),
-  getPerson,
-);
+const getManagingEditor = flow<Person>(get('managingEditor'), getPerson);
 
-const getWebMaster = flow<Person>(
-  get('webMaster'),
-  getPerson,
-);
+const getWebMaster = flow<Person>(get('webMaster'), getPerson);
 
 const selectImage = createStructuredSelector<Image>({
   url: getOrNull('url'),
@@ -83,10 +54,7 @@ const selectImage = createStructuredSelector<Image>({
   width: getOrNull('width'),
 });
 
-const getImage = flow<Image>(
-  get('image'),
-  (data: any) => data ? selectImage(data): null,
-);
+const getImage = flow<Image>(get('image'), (data: any) => (data ? selectImage(data) : null));
 
 export const getChannel = (content: any): Channel => {
   const root = content.rss || content.feed;

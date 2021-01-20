@@ -1,4 +1,4 @@
-import { Channel } from "./dtos";
+import { Channel } from './dtos';
 
 export class RssParser {
   private xmlParser: any;

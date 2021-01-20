@@ -5,7 +5,7 @@ export const trim = (str: string): string => {
   if (!str) {
     return '';
   }
-  
+
   if (isString(str)) {
     return str.trim();
   }
@@ -44,4 +44,4 @@ export const toInteger = (value: any): number => {
   return Number.isInteger(result) ? result : 0;
 };
 export const toBoolean = (value: any) => !!value;
-export const toDate = (value: any) => (value || null);
+export const toDate = (value: any) => value || null;
