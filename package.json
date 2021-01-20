@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.9.1",
-    "@types/lodash": "^4.14.167",
     "husky": "^4.3.7",
     "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",
@@ -55,5 +54,11 @@
   "files": [
     "dist",
     "src"
+  ],
+  "keywords": [
+    "xml",
+    "rss",
+    "atom",
+    "parser"
   ]
 }
