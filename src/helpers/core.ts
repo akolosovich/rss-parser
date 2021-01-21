@@ -35,7 +35,13 @@ export const flow = <T>(...args: Function[]) => (data: any): T => {
 
 export const map = (fn: any) => (array: any[]): any[] => array.map(fn);
 export const filter = (fn: any) => (array: any[]): any[] => array.filter(fn);
-export const getOr = (defaultValue: any) => (field: string) => (obj: any) => (obj ? obj[field] : defaultValue);
+export const getOr = (defaultValue: any) => (field: string) => (obj: any) => {
+  if (!obj || !obj[field]) {
+    return defaultValue;
+  }
+  
+  return obj[field];
+};
 export const get = getOr(undefined);
 export const getOrNull = getOr(null);
 export const toInteger = (value: any): number => {

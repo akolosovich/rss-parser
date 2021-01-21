@@ -17,7 +17,10 @@
   "image": {
     "url": "https://leonardo.osnova.io/16204d4e-a928-fff9-a4ed-e1ca1d2cec0d",
     "title": "DTF: Популярное за все время",
-    "link": "https://dtf.ru/"
+    "link": "https://dtf.ru/",
+    "description": null,
+    "height": 0,
+    "width": 0
   },
   "managingEditor": null,
   "webMaster": null,

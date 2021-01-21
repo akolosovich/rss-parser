@@ -1,5 +1,5 @@
 import { Channel, Image, Person, Nullable } from '../dtos';
-import { createSelector, createStructuredSelector, flow, get, getOrNull, isString, trimOrNull } from '../helpers';
+import { createSelector, createStructuredSelector, flow, get, getOrNull, isString, toInteger, trimOrNull } from '../helpers';
 import { getEntries } from './entry_selectors';
 import {
   getLinks,
@@ -50,8 +50,14 @@ const selectImage = createStructuredSelector<Image>({
   title: getOrNull('title'),
   link: getOrNull('link'),
   description: getOrNull('description'),
-  height: getOrNull('height'),
-  width: getOrNull('width'),
+  height: flow(
+    get('height'),
+    toInteger,
+  ),
+  width: flow(
+    get('width'),
+    toInteger,
+  ),
 });
 
 const getImage = flow<Image>(get('image'), (data: any) => (data ? selectImage(data) : null));
