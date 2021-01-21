@@ -39,7 +39,7 @@ export const getOr = (defaultValue: any) => (field: string) => (obj: any) => {
   if (!obj || !obj[field]) {
     return defaultValue;
   }
-  
+
   return obj[field];
 };
 export const get = getOr(undefined);

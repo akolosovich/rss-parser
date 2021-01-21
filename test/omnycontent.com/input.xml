@@ -1,0 +1,45 @@
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:media="http://search.yahoo.com/mrss/" xmlns:psc="https://podlove.org/simple-chapters/"
+    xmlns:omny="https://omny.fm/rss-extensions" xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:acast="https://schema.acast.com/1.0/"
+    version="2.0">
+    <channel>
+        <title>My Favorite Murder with Karen Kilgariff and Georgia Hardstark</title>
+        <description>
+            <![CDATA[ <p>Lifelong fans of true crime stories Karen Kilgariff and Georgia Hardstark tell each other their favorite tales of murder and hear hometown crime stories from friends and fans. </p> ]]>
+        </description>
+        <link>https://www.myfavoritemurder.com/</link>
+        <language>en-US</language>
+        <copyright>2021 Exactly Right</copyright>
+        <image>
+            <url>
+                https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/44bbf446-4627-4f83-a7fd-ab070007db11/72b96aa8-88bd-480a-87af-ab070007db36/image.jpg?t=1573864119&size=Large
+            </url>
+            <title>My Favorite Murder with Karen Kilgariff and Georgia Hardstark</title>
+            <link>https://www.myfavoritemurder.com/</link>
+        </image>
+        <item>
+            <title>256 - Live at the Fillmore in Detroit, MI (2017)</title>
+            <description>In this week’s former Fan Cult exclusive episode, Karen and Georgia cover the death of Robin
+                Boes and murderer Lowell Amos. See omnystudio.com/listener for privacy information.</description>
+            <content:encoded>
+                <![CDATA[ <p>In this week&rsquo;s former Fan Cult exclusive episode, Karen and Georgia cover the death of Robin Boes and murderer Lowell Amos.</p><p>See <a href="https://omnystudio.com/listener">omnystudio.com/listener</a> for privacy information.</p> ]]>
+            </content:encoded>
+            <media:content
+                url="https://traffic.omny.fm/d/clips/aaea4e69-af51-495e-afc9-a9760146922b/44bbf446-4627-4f83-a7fd-ab070007db11/351ae6e0-259b-40bf-88ca-aca9007c8b02/audio.mp3?utm_source=Podcast&in_playlist=72b96aa8-88bd-480a-87af-ab070007db36"
+                type="audio/mpeg">
+                <media:player
+                    url="https://omny.fm/shows/my-favorite-murder-with-karen-kilgariff-and-georgi/256-live-at-the-fillmore-in-detroit-mi-2017/embed" />
+            </media:content>
+            <media:content
+                url="https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/44bbf446-4627-4f83-a7fd-ab070007db11/72b96aa8-88bd-480a-87af-ab070007db36/image.jpg?t=1573864119&size=Large"
+                type="image/jpeg" />
+            <guid isPermaLink="false">351ae6e0-259b-40bf-88ca-aca9007c8b02</guid>
+            <pubDate>Thu, 07 Jan 2021 11:00:00 +0000</pubDate>
+            <enclosure
+                url="https://traffic.omny.fm/d/clips/aaea4e69-af51-495e-afc9-a9760146922b/44bbf446-4627-4f83-a7fd-ab070007db11/351ae6e0-259b-40bf-88ca-aca9007c8b02/audio.mp3?utm_source=Podcast&in_playlist=72b96aa8-88bd-480a-87af-ab070007db36"
+                length="96913649" type="audio/mpeg" />
+            <link>https://omny.fm/shows/my-favorite-murder-with-karen-kilgariff-and-georgi/256-live-at-the-fillmore-in-detroit-mi-2017</link>
+        </item>
+    </channel>
+</rss>

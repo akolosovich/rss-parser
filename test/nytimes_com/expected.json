@@ -149,34 +149,36 @@
         },
         "thumbnails": [],
         "categories": [],
+        "contents": [
+          {
+            "title": null,
+            "description": null,
+            "thumbnails": [],
+            "categories": [],
+            "credit": null,
+            "copyright": null,
+            "url": "https://static01.nyt.com/images/2020/12/17/us/politics/17dc-pardons1/17dc-pardons1-moth-v2.jpg",
+            "fileSize": 0,
+            "type": null,
+            "medium": "image",
+            "isDefault": false,
+            "expression": null,
+            "bitrate": 0,
+            "framerate": 0,
+            "samplingrate": 0,
+            "channels": 0,
+            "duration": 0,
+            "height": 151,
+            "width": 151,
+            "lang": null
+          }
+        ],
         "credit": {
           "value": "Samuel Corum for The New York Times",
           "role": null,
           "scheme": null
         },
-        "copyright": null,
-        "content": {
-          "title": null,
-          "description": null,
-          "thumbnails": [],
-          "categories": [],
-          "credit": null,
-          "copyright": null,
-          "url": "https://static01.nyt.com/images/2020/12/17/us/politics/17dc-pardons1/17dc-pardons1-moth-v2.jpg",
-          "fileSize": 0,
-          "type": null,
-          "medium": "image",
-          "isDefault": false,
-          "expression": null,
-          "bitrate": 0,
-          "framerate": 0,
-          "samplingrate": 0,
-          "channels": 0,
-          "duration": 0,
-          "height": 151,
-          "width": 151,
-          "lang": null
-        }
+        "copyright": null
       }
     }
   ]

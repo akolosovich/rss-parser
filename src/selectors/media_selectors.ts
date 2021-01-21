@@ -77,7 +77,7 @@ export const selectCredit = createStructuredSelector<MediaCredit>({
   scheme: getPropScheme,
 });
 
-export const getCredit = flow<MediaCredit>(get('media:credit'), (data: any) => {
+export const getMediaCredit = flow<MediaCredit>(get('media:credit'), (data: any) => {
   if (!data) {
     return null;
   }
@@ -90,7 +90,7 @@ export const selectCopyright = createStructuredSelector<MediaCopyright>({
   url: getPropUrl,
 });
 
-export const getCopyright = flow<MediaCopyright>(get('media:copyright'), (data: any) =>
+export const getMediaCopyright = flow<MediaCopyright>(get('media:copyright'), (data: any) =>
   data ? selectCopyright(data) : null
 );
 
@@ -100,7 +100,7 @@ export const selectCategory = createStructuredSelector<MediaCategory>({
   label: getPropLabel,
 });
 
-export const getCategories = flow<MediaCategory[]>(
+export const getMediaCategories = flow<MediaCategory[]>(
   get('media:category'),
   (data: any) => (isArray(data) ? data : [data]),
   map((element: any) => {
@@ -125,9 +125,9 @@ export const selectMediaContent = createStructuredSelector<MediaContent>({
   title: getMediaTitle,
   description: getMediaDescription,
   thumbnails: getMediaThumbnails,
-  categories: getCategories,
-  credit: getCredit,
-  copyright: getCopyright,
+  categories: getMediaCategories,
+  credit: getMediaCredit,
+  copyright: getMediaCopyright,
 
   url: getPropUrl,
   fileSize: getPropFileSize,
@@ -145,18 +145,24 @@ export const selectMediaContent = createStructuredSelector<MediaContent>({
   lang: getPropLang,
 });
 
-export const getMediaContent = flow<MediaContent>(get('media:content'), (data: any) =>
-  data ? selectMediaContent(data) : null
-);
+export const getMediaContents = flow<MediaContent[]>(get('media:content'), (data: any) => {
+  if (!data) {
+    return [];
+  }
+
+  const values = isArray(data) ? data : [data];
+
+  return values.map(selectMediaContent);
+});
 
 export const selectMedia = createStructuredSelector<Media>({
   title: getMediaTitle,
   description: getMediaDescription,
   thumbnails: getMediaThumbnails,
-  categories: getCategories,
-  credit: getCredit,
-  copyright: getCopyright,
-  content: getMediaContent,
+  categories: getMediaCategories,
+  contents: getMediaContents,
+  credit: getMediaCredit,
+  copyright: getMediaCopyright,
 });
 
 export const hasMedia = (data: any) => Object.keys(data).filter(key => key.startsWith('media:')).length > 0;

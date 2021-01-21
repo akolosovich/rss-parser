@@ -59,5 +59,5 @@ export type MediaContent =
 export type Media =
   | null
   | (MediaBase & {
-      content: MediaContent;
+      contents: MediaContent[];
     });
