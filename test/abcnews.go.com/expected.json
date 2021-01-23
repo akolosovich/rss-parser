@@ -17,7 +17,10 @@
   "image": {
     "url": "https://s.abcnews.com/images/site/abcnews_google_rss_logo.png",
     "title": "ABC News: Top Stories",
-    "link": "http://abcnews.go.com/"
+    "link": "http://abcnews.go.com/",
+    "description": null,
+    "height": 0,
+    "width": 0
   },
   "managingEditor": null,
   "webMaster": null,
@@ -108,10 +111,11 @@
           }
         ],
         "categories": [],
+        "contents": [],
         "credit": null,
-        "copyright": null,
-        "content": null
-      }
+        "copyright": null
+      },
+      "dc": null
     }
   ]
 }

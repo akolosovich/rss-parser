@@ -1,0 +1,131 @@
+{
+  "id": null,
+  "title": "My Favorite Murder with Karen Kilgariff and Georgia Hardstark",
+  "version": "2.0",
+  "description": " <p>Lifelong fans of true crime stories Karen Kilgariff and Georgia Hardstark tell each other their favorite tales of murder and hear hometown crime stories from friends and fans. </p> ",
+  "language": "en-US",
+  "links": [
+    {
+      "href": "https://www.myfavoritemurder.com/",
+      "rel": "alternate",
+      "type": null,
+      "hreflang": null,
+      "title": null,
+      "length": 0
+    }
+  ],
+  "image": {
+    "url": "https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/44bbf446-4627-4f83-a7fd-ab070007db11/72b96aa8-88bd-480a-87af-ab070007db36/image.jpg?t=1573864119&size=Large",
+    "title": "My Favorite Murder with Karen Kilgariff and Georgia Hardstark",
+    "link": "https://www.myfavoritemurder.com/",
+    "description": null,
+    "height": 0,
+    "width": 0
+  },
+  "managingEditor": null,
+  "webMaster": null,
+  "authors": [],
+  "contributors": [],
+  "updatedOn": null,
+  "publishedOn": null,
+  "categories": [],
+  "entries": [
+    {
+      "id": {
+        "value": "351ae6e0-259b-40bf-88ca-aca9007c8b02",
+        "isPermaLink": true
+      },
+      "title": {
+        "value": "256 - Live at the Fillmore in Detroit, MI (2017)",
+        "type": "html"
+      },
+      "description": {
+        "value": "In this week’s former Fan Cult exclusive episode, Karen and Georgia cover the death of Robin\n                Boes and murderer Lowell Amos. See omnystudio.com/listener for privacy information.",
+        "type": "html"
+      },
+      "updatedOn": null,
+      "publishedOn": "Thu, 07 Jan 2021 11:00:00 +0000",
+      "copyright": null,
+      "links": [
+        {
+          "href": "https://omny.fm/shows/my-favorite-murder-with-karen-kilgariff-and-georgi/256-live-at-the-fillmore-in-detroit-mi-2017",
+          "rel": "alternate",
+          "type": null,
+          "hreflang": null,
+          "title": null,
+          "length": 0
+        }
+      ],
+      "categories": [],
+      "source": null,
+      "enclosures": [
+        {
+          "url": "https://traffic.omny.fm/d/clips/aaea4e69-af51-495e-afc9-a9760146922b/44bbf446-4627-4f83-a7fd-ab070007db11/351ae6e0-259b-40bf-88ca-aca9007c8b02/audio.mp3?utm_source=Podcast&in_playlist=72b96aa8-88bd-480a-87af-ab070007db36",
+          "type": "audio/mpeg",
+          "length": 96913649
+        }
+      ],
+      "content": {
+        "value": "<p>In this week&rsquo;s former Fan Cult exclusive episode, Karen and Georgia cover the death of Robin Boes and murderer Lowell Amos.</p><p>See <a href=\"https://omnystudio.com/listener\">omnystudio.com/listener</a> for privacy information.</p>",
+        "type": "html"
+      },
+      "authors": [],
+      "contributors": [],
+      "media": {
+        "title": null,
+        "description": null,
+        "thumbnails": [],
+        "categories": [],
+        "contents": [
+          {
+            "title": null,
+            "description": null,
+            "thumbnails": [],
+            "categories": [],
+            "credit": null,
+            "copyright": null,
+            "url": "https://traffic.omny.fm/d/clips/aaea4e69-af51-495e-afc9-a9760146922b/44bbf446-4627-4f83-a7fd-ab070007db11/351ae6e0-259b-40bf-88ca-aca9007c8b02/audio.mp3?utm_source=Podcast&in_playlist=72b96aa8-88bd-480a-87af-ab070007db36",
+            "fileSize": 0,
+            "type": "audio/mpeg",
+            "medium": null,
+            "isDefault": false,
+            "expression": null,
+            "bitrate": 0,
+            "framerate": 0,
+            "samplingrate": 0,
+            "channels": 0,
+            "duration": 0,
+            "height": 0,
+            "width": 0,
+            "lang": null
+          },
+          {
+            "title": null,
+            "description": null,
+            "thumbnails": [],
+            "categories": [],
+            "credit": null,
+            "copyright": null,
+            "url": "https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/44bbf446-4627-4f83-a7fd-ab070007db11/72b96aa8-88bd-480a-87af-ab070007db36/image.jpg?t=1573864119&size=Large",
+            "fileSize": 0,
+            "type": "image/jpeg",
+            "medium": null,
+            "isDefault": false,
+            "expression": null,
+            "bitrate": 0,
+            "framerate": 0,
+            "samplingrate": 0,
+            "channels": 0,
+            "duration": 0,
+            "height": 0,
+            "width": 0,
+            "lang": null
+          }
+        ],
+        "credit": null,
+        "copyright": null
+      },
+      "dc": null
+    }
+  ]
+}

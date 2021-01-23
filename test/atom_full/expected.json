@@ -73,7 +73,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -92,7 +93,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -111,7 +113,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -133,7 +136,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -155,7 +159,8 @@
       },
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -177,7 +182,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -204,7 +210,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -229,7 +236,8 @@
         }
       ],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -259,7 +267,8 @@
         }
       ],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -287,7 +296,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -323,7 +333,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -349,7 +360,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -381,7 +393,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -406,7 +419,8 @@
           "uri": "http://one_contributor_uri"
         }
       ],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -436,7 +450,8 @@
           "uri": "http://multiple_contributors_uri_2"
         }
       ],
-      "media": null
+      "media": null,
+      "dc": null
     }
   ]
 }

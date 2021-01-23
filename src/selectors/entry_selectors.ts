@@ -13,22 +13,21 @@ import {
 } from './common_selectors';
 import { getPropLength, getPropText, getPropType, getPropUrl } from './props_selectors';
 import { getMedia } from './media_selectors';
+import { getDublinCore } from './dublin_core_selectors';
 
-export const getTitle = flow<Text>(get('title'), getText);
+const getTitle = flow<Text>(get('title'), getText);
 
-export const getDescription = createSelector<Text>(
-  get('description'),
-  get('summary'),
-  (description: any, summary: any) => getText(description || summary)
+const getDescription = createSelector<Text>(get('description'), get('summary'), (description: any, summary: any) =>
+  getText(description || summary)
 );
 
-export const selectEnclosure = createStructuredSelector<Enclosure>({
+const selectEnclosure = createStructuredSelector<Enclosure>({
   url: getPropUrl,
   type: getPropType,
   length: getPropLength,
 });
 
-export const getEnclosures = flow<Enclosure>(get('enclosure'), (enclosure: any) => {
+const getEnclosures = flow<Enclosure>(get('enclosure'), (enclosure: any) => {
   if (!enclosure) {
     return [];
   }
@@ -37,18 +36,16 @@ export const getEnclosures = flow<Enclosure>(get('enclosure'), (enclosure: any) 
   return values.map(selectEnclosure);
 });
 
-export const getContent = createSelector<Text>(get('content:encoded'), get('content'), (a: any, b: any) =>
-  getText(a || b)
-);
+const getContent = createSelector<Text>(get('content:encoded'), get('content'), (a: any, b: any) => getText(a || b));
 
-export const selectSource = createStructuredSelector<Source>({
+const selectSource = createStructuredSelector<Source>({
   id: getGuid,
   title: createSelector(get('title'), getPropText, (a: any, b: any) => a || b || null),
   url: getPropUrl,
   updatedOn: getUpdatedOn,
 });
 
-export const getSource = flow<Source>(get('source'), (data: any) => (data ? selectSource(data) : null));
+const getSource = flow<Source>(get('source'), (data: any) => (data ? selectSource(data) : null));
 
 export const selectEntry = createStructuredSelector<Entry>({
   id: getGuid,
@@ -65,6 +62,7 @@ export const selectEntry = createStructuredSelector<Entry>({
   authors: getAuthors,
   contributors: getContributors,
   media: getMedia,
+  dc: getDublinCore,
 });
 
 export const getEntries = createSelector<Entry[]>(get('item'), get('entry'), (item: any, entry: any): Entry[] => {

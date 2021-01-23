@@ -50,50 +50,53 @@
             "label": null
           }
         ],
+        "contents": [
+          {
+            "title": {
+              "value": "item 1 media title",
+              "type": "plain"
+            },
+            "description": {
+              "value": "item 1 media description",
+              "type": "plain"
+            },
+            "thumbnails": [
+              {
+                "url": "http://item-1-media/thumbnail.jpg",
+                "width": 75,
+                "height": 50,
+                "time": "12:05:01.123"
+              }
+            ],
+            "categories": [],
+            "credit": {
+              "value": "Tom Johnson",
+              "role": "author",
+              "scheme": "urn:ebu"
+            },
+            "copyright": {
+              "url": "https://item-1-media-copyright"
+            },
+            "url": "http://www.foo.com/movie.mov",
+            "fileSize": 12216320,
+            "type": "video/quicktime",
+            "medium": "video",
+            "isDefault": true,
+            "expression": "full",
+            "bitrate": 128,
+            "framerate": 25,
+            "samplingrate": 0,
+            "channels": 2,
+            "duration": 185,
+            "height": 200,
+            "width": 300,
+            "lang": "en"
+          }
+        ],
         "credit": null,
-        "copyright": null,
-        "content": {
-          "title": {
-            "value": "item 1 media title",
-            "type": "plain"
-          },
-          "description": {
-            "value": "item 1 media description",
-            "type": "plain"
-          },
-          "thumbnails": [
-            {
-              "url": "http://item-1-media/thumbnail.jpg",
-              "width": 75,
-              "height": 50,
-              "time": "12:05:01.123"
-            }
-          ],
-          "categories": [],
-          "credit": {
-            "value": "Tom Johnson",
-            "role": "author",
-            "scheme": "urn:ebu"
-          },
-          "copyright": {
-            "url": "https://item-1-media-copyright"
-          },
-          "url": "http://www.foo.com/movie.mov",
-          "fileSize": 12216320,
-          "type": "video/quicktime",
-          "medium": "video",
-          "isDefault": true,
-          "expression": "full",
-          "bitrate": 128,
-          "framerate": 25,
-          "samplingrate": 0,
-          "channels": 2,
-          "duration": 185,
-          "height": 200,
-          "width": 300,
-          "lang": "en"
-        }
-      }
+        "copyright": null
+      },
+      "dc": null
     },
     {
       "id": null,
@@ -117,64 +120,67 @@
         "description": null,
         "thumbnails": [],
         "categories": [],
+        "contents": [
+          {
+            "title": {
+              "value": "item-2-media-title",
+              "type": "plain"
+            },
+            "description": {
+              "value": "item-2-media-description",
+              "type": "html"
+            },
+            "thumbnails": [
+              {
+                "url": "http://item-2-media/thumbnail.jpg",
+                "width": 0,
+                "height": 0,
+                "time": null
+              }
+            ],
+            "categories": [
+              {
+                "value": "music/artist/album/song",
+                "scheme": "http://search.yahoo.com/mrss/category_ schema",
+                "label": null
+              },
+              {
+                "value": "Arts/Movies/Titles/A/Ace_Ventura_Series/Ace_Ventura_ -_Pet_Detective",
+                "scheme": "http://dmoz.org",
+                "label": "Ace Ventura - Pet Detective"
+              },
+              {
+                "value": "ycantpark mobile",
+                "scheme": "urn:flickr:tags",
+                "label": null
+              }
+            ],
+            "credit": {
+              "value": "item-2-media-author",
+              "role": "author",
+              "scheme": "urn:ebu"
+            },
+            "copyright": null,
+            "url": "http://item-2-media-content.mp4",
+            "fileSize": 7,
+            "type": null,
+            "medium": "video",
+            "isDefault": true,
+            "expression": null,
+            "bitrate": 0,
+            "framerate": 0,
+            "samplingrate": 0,
+            "channels": 0,
+            "duration": 10,
+            "height": 0,
+            "width": 0,
+            "lang": null
+          }
+        ],
         "credit": null,
-        "copyright": null,
-        "content": {
-          "title": {
-            "value": "item-2-media-title",
-            "type": "plain"
-          },
-          "description": {
-            "value": "item-2-media-description",
-            "type": "html"
-          },
-          "thumbnails": [
-            {
-              "url": "http://item-2-media/thumbnail.jpg",
-              "width": 0,
-              "height": 0,
-              "time": null
-            }
-          ],
-          "categories": [
-            {
-              "value": "music/artist/album/song",
-              "scheme": "http://search.yahoo.com/mrss/category_ schema",
-              "label": null
-            },
-            {
-              "value": "Arts/Movies/Titles/A/Ace_Ventura_Series/Ace_Ventura_ -_Pet_Detective",
-              "scheme": "http://dmoz.org",
-              "label": "Ace Ventura - Pet Detective"
-            },
-            {
-              "value": "ycantpark mobile",
-              "scheme": "urn:flickr:tags",
-              "label": null
-            }
-          ],
-          "credit": {
-            "value": "item-2-media-author",
-            "role": "author",
-            "scheme": "urn:ebu"
-          },
-          "copyright": null,
-          "url": "http://item-2-media-content.mp4",
-          "fileSize": 7,
-          "type": null,
-          "medium": "video",
-          "isDefault": true,
-          "expression": null,
-          "bitrate": 0,
-          "framerate": 0,
-          "samplingrate": 0,
-          "channels": 0,
-          "duration": 10,
-          "height": 0,
-          "width": 0,
-          "lang": null
-        }
-      }
+        "copyright": null
+      },
+      "dc": null
     }
   ]
 }
