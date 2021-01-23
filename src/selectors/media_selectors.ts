@@ -7,7 +7,7 @@ import {
   MediaContent,
   Media,
 } from '../dtos';
-import { createStructuredSelector, flow, get, map, filter, isArray, isString } from '../helpers';
+import { createStructuredSelector, flow, get, map, filter, isArray, isString, hasKeyStartsWith } from '../helpers';
 import {
   getPropBitrate,
   getPropChannels,
@@ -30,21 +30,19 @@ import {
   getPropLabel,
 } from './props_selectors';
 
-export const selectMediaTitle = createStructuredSelector<MediaTextData>({
+const selectMediaTitle = createStructuredSelector<MediaTextData>({
   value: getPropText,
   type: getPropType,
 });
 
-export const getMediaTitle = flow<MediaTextData>(get('media:title'), (data: any) =>
-  data ? selectMediaTitle(data) : null
-);
+const getMediaTitle = flow<MediaTextData>(get('media:title'), (data: any) => (data ? selectMediaTitle(data) : null));
 
-export const selectMediaDescription = createStructuredSelector<MediaTextData>({
+const selectMediaDescription = createStructuredSelector<MediaTextData>({
   value: getPropText,
   type: getPropType,
 });
 
-export const getMediaDescription = flow<MediaTextData>(get('media:description'), (data: any) => {
+const getMediaDescription = flow<MediaTextData>(get('media:description'), (data: any) => {
   if (!data) {
     return null;
   }
@@ -54,14 +52,14 @@ export const getMediaDescription = flow<MediaTextData>(get('media:description'),
   return selectMediaDescription(value);
 });
 
-export const selectMediaThumbnail = createStructuredSelector<MediaThumbnail>({
+const selectMediaThumbnail = createStructuredSelector<MediaThumbnail>({
   url: getPropUrl,
   width: getPropWidth,
   height: getPropHeight,
   time: getPropTime,
 });
 
-export const getMediaThumbnails = flow<MediaThumbnail[]>(get('media:thumbnail'), (data: any) => {
+const getMediaThumbnails = flow<MediaThumbnail[]>(get('media:thumbnail'), (data: any) => {
   if (!data) {
     return [];
   }
@@ -71,13 +69,13 @@ export const getMediaThumbnails = flow<MediaThumbnail[]>(get('media:thumbnail'),
   return values.map(selectMediaThumbnail);
 });
 
-export const selectCredit = createStructuredSelector<MediaCredit>({
+const selectCredit = createStructuredSelector<MediaCredit>({
   value: getPropText,
   role: getPropRole,
   scheme: getPropScheme,
 });
 
-export const getMediaCredit = flow<MediaCredit>(get('media:credit'), (data: any) => {
+const getMediaCredit = flow<MediaCredit>(get('media:credit'), (data: any) => {
   if (!data) {
     return null;
   }
@@ -86,21 +84,21 @@ export const getMediaCredit = flow<MediaCredit>(get('media:credit'), (data: any)
   return selectCredit(value);
 });
 
-export const selectCopyright = createStructuredSelector<MediaCopyright>({
+const selectCopyright = createStructuredSelector<MediaCopyright>({
   url: getPropUrl,
 });
 
-export const getMediaCopyright = flow<MediaCopyright>(get('media:copyright'), (data: any) =>
+const getMediaCopyright = flow<MediaCopyright>(get('media:copyright'), (data: any) =>
   data ? selectCopyright(data) : null
 );
 
-export const selectCategory = createStructuredSelector<MediaCategory>({
+const selectCategory = createStructuredSelector<MediaCategory>({
   value: getPropText,
   scheme: getPropScheme,
   label: getPropLabel,
 });
 
-export const getMediaCategories = flow<MediaCategory[]>(
+const getMediaCategories = flow<MediaCategory[]>(
   get('media:category'),
   (data: any) => (isArray(data) ? data : [data]),
   map((element: any) => {
@@ -121,7 +119,7 @@ export const getMediaCategories = flow<MediaCategory[]>(
   filter((element: any) => element)
 );
 
-export const selectMediaContent = createStructuredSelector<MediaContent>({
+const selectMediaContent = createStructuredSelector<MediaContent>({
   title: getMediaTitle,
   description: getMediaDescription,
   thumbnails: getMediaThumbnails,
@@ -145,7 +143,7 @@ export const selectMediaContent = createStructuredSelector<MediaContent>({
   lang: getPropLang,
 });
 
-export const getMediaContents = flow<MediaContent[]>(get('media:content'), (data: any) => {
+const getMediaContents = flow<MediaContent[]>(get('media:content'), (data: any) => {
   if (!data) {
     return [];
   }
@@ -154,6 +152,8 @@ export const getMediaContents = flow<MediaContent[]>(get('media:content'), (data
 
   return values.map(selectMediaContent);
 });
+
+const hasMedia = hasKeyStartsWith('media:');
 
 export const selectMedia = createStructuredSelector<Media>({
   title: getMediaTitle,
@@ -164,8 +164,6 @@ export const selectMedia = createStructuredSelector<Media>({
   credit: getMediaCredit,
   copyright: getMediaCopyright,
 });
-
-export const hasMedia = (data: any) => Object.keys(data).filter(key => key.startsWith('media:')).length > 0;
 
 export const getMedia = (obj: any): Media => {
   if (!obj) {

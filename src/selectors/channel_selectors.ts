@@ -22,7 +22,7 @@ import {
 } from './common_selectors';
 import { getPropVersion } from './props_selectors';
 
-export const getTitle = flow<string>(get('title'), (title: any) => {
+const getTitle = flow<string>(get('title'), (title: any) => {
   if (!title) {
     return null;
   }
@@ -30,7 +30,7 @@ export const getTitle = flow<string>(get('title'), (title: any) => {
   return isString(title) ? title : null;
 });
 
-export const getDescription = createSelector<Nullable<string>>(
+const getDescription = createSelector<Nullable<string>>(
   get('description'),
   get('subtitle'),
   (description: any, subtitle: any) => {
@@ -54,7 +54,9 @@ const getManagingEditor = flow<Person>(get('managingEditor'), getPerson);
 
 const getWebMaster = flow<Person>(get('webMaster'), getPerson);
 
-const selectImage = createStructuredSelector<Image>({
+const getImage = flow<Image>(get('image'), (data: any) => (data ? selectImage(data) : null));
+
+export const selectImage = createStructuredSelector<Image>({
   url: getOrNull('url'),
   title: getOrNull('title'),
   link: getOrNull('link'),
@@ -63,10 +65,8 @@ const selectImage = createStructuredSelector<Image>({
   width: flow(get('width'), toInteger),
 });
 
-const getImage = flow<Image>(get('image'), (data: any) => (data ? selectImage(data) : null));
-
 export const getChannel = (content: any): Channel => {
-  const root = content.rss || content.feed;
+  const root = content.rss || content.feed || content['rdf:RDF'];
   const channel = root.channel || root;
 
   return {

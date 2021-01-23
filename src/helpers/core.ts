@@ -51,3 +51,4 @@ export const toInteger = (value: any): number => {
 };
 export const toBoolean = (value: any) => !!value;
 export const toDate = (value: any) => value || null;
+export const hasKeyStartsWith = (filterKey: string) => (obj: any): boolean => Object.keys(obj).filter(key => key.startsWith(filterKey)).length > 0;

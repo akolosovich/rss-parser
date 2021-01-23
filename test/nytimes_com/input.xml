@@ -1,8 +1,7 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+<rss version="2.0">
     <channel>
         <title>NYT > Top Stories</title>
         <link>https://www.nytimes.com</link>
-        <atom:link href="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" rel="self" type="application/rss+xml"/>
         <description/>
         <language>en-us</language>
         <copyright>Copyright 2021 The New York Times Company</copyright>
@@ -18,7 +17,6 @@
             <link>https://www.nytimes.com/2021/01/17/us/politics/trump-pardons.html</link>
             <guid isPermaLink="true">https://www.nytimes.com/2021/01/17/us/politics/trump-pardons.html</guid>
             <description>The president’s allies have collected tens of thousands of dollars — and potentially much more — from people seeking pardons.</description>
-            <dc:creator>Michael S. Schmidt and Kenneth P. Vogel</dc:creator>
             <pubDate>Sun, 17 Jan 2021 16:50:29 +0000</pubDate>
             <category domain="http://www.nytimes.com/namespaces/keywords/des">Amnesties, Commutations and Pardons</category>
             <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>

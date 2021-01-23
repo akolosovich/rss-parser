@@ -1,5 +1,7 @@
 # RSS Parser
 
+Lightweight and fast rss-parser with minimal dependencies.
+
 ## Usage
 
 ```javascript
@@ -12,10 +14,10 @@ const data = rssParser.parseString(...);
 console.log(data);
 ```
 
-- [Output Example](test/general/expected.json)
-- [Types](src/dtos/rss.ts)
+- [Output Example](https://github.com/akolosovich/rss-parser/blob/master/test/general/expected.json)
+- [Types](https://github.com/akolosovich/rss-parser/blob/master/src/dtos/rss.ts)
 
-## But Why
+## Motivation
 
 Why to write my own parser instead of using existing one?
 
@@ -27,7 +29,8 @@ Thirdly, I wanted to create private RSS server as a replacement for public one (
 
 ## TODO
 
-- add DC support
+- fix dates
+- parse and filter languages
 - add RSS 1.0 support
 - use proper tests
 
@@ -36,7 +39,8 @@ Thirdly, I wanted to create private RSS server as a replacement for public one (
 - [RSS 1.0 spec](https://validator.w3.org/feed/docs/rss1.html)
 - [RSS 2.0 spec](https://validator.w3.org/feed/docs/rss2.html)
 - [Atom spec](https://validator.w3.org/feed/docs/atom.html)
-- [Media Namespace spec](https://www.rssboard.org/media-rss)
+- [Media Namespace](https://www.rssboard.org/media-rss)
+- [Dublin Core Namespace](https://web.resource.org/rss/1.0/modules/dc)
 
 ## Links
 

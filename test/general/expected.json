@@ -110,7 +110,8 @@
         }
       ],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     },
     {
       "id": {
@@ -157,7 +158,8 @@
       "content": null,
       "authors": [],
       "contributors": [],
-      "media": null
+      "media": null,
+      "dc": null
     }
   ]
 }

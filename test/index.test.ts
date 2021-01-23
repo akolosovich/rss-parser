@@ -32,4 +32,5 @@ describe('rssParser', () => {
   run('nytimes_com');
   run('abcnews.go.com');
   run('omnycontent.com');
+  run('dublin_core');
 });

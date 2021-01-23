@@ -95,7 +95,8 @@
         ],
         "credit": null,
         "copyright": null
-      }
+      },
+      "dc": null
     },
     {
       "id": null,
@@ -178,7 +179,8 @@
         ],
         "credit": null,
         "copyright": null
-      }
+      },
+      "dc": null
     }
   ]
 }
