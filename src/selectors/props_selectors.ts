@@ -16,6 +16,7 @@ export const getPropAsBoolean = (key: string) => flow<boolean>(get(key), toBoole
 export const getPropVersion = getPropAsString('@_version');
 export const getPropTerm = getPropAsString('@_term');
 export const getPropUrl = getPropAsString('@_url');
+export const getPropUri = getPropAsString('@_uri');
 export const getPropTitle = getPropAsString('@_title');
 export const getPropType = getPropAsString('@_type');
 export const getPropRole = getPropAsString('@_role');

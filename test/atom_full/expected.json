@@ -453,5 +453,13 @@
       "media": null,
       "dc": null
     }
-  ]
+  ],
+  "generator": {
+    "value": "channel-generator-text",
+    "version": "1.0",
+    "uri": "/channel-generator-uri"
+  },
+  "ttl": 0,
+  "icon": "https://channel-icon-url",
+  "logo": "https://channel-logo.png"
 }

@@ -117,5 +117,13 @@
       "media": null,
       "dc": null
     }
-  ]
+  ],
+  "generator": {
+    "value": "RSS for Osnova",
+    "version": null,
+    "uri": null
+  },
+  "ttl": 10,
+  "icon": null,
+  "logo": null
 }

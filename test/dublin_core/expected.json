@@ -718,5 +718,9 @@
         "rights": "copyright 2021"
       }
     }
-  ]
+  ],
+  "generator": null,
+  "ttl": 0,
+  "icon": null,
+  "logo": null
 }

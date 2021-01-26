@@ -1,4 +1,4 @@
-import { Channel, Image, Person, Nullable } from '../dtos';
+import { Channel, Image, Person, Generator, Nullable } from '../dtos';
 import {
   createSelector,
   createStructuredSelector,
@@ -20,7 +20,7 @@ import {
   getAuthors,
   getContributors,
 } from './common_selectors';
-import { getPropVersion } from './props_selectors';
+import { getPropText, getPropUri, getPropVersion } from './props_selectors';
 
 const getTitle = flow<string>(get('title'), (title: any) => {
   if (!title) {
@@ -54,9 +54,11 @@ const getManagingEditor = flow<Person>(get('managingEditor'), getPerson);
 
 const getWebMaster = flow<Person>(get('webMaster'), getPerson);
 
+const getTtl = flow<number>(get('ttl'), toInteger);
+
 const getImage = flow<Image>(get('image'), (data: any) => (data ? selectImage(data) : null));
 
-export const selectImage = createStructuredSelector<Image>({
+const selectImage = createStructuredSelector<Image>({
   url: getOrNull('url'),
   title: getOrNull('title'),
   link: getOrNull('link'),
@@ -64,6 +66,38 @@ export const selectImage = createStructuredSelector<Image>({
   height: flow(get('height'), toInteger),
   width: flow(get('width'), toInteger),
 });
+
+const selectGenerator = createStructuredSelector<Generator>({
+  value: getPropText,
+  version: getPropVersion,
+  uri: getPropUri,
+});
+
+const getGenerator = flow<Generator>(get('generator'), (generator: any) => {
+  if (!generator) {
+    return null;
+  }
+
+  const value = isString(generator) ? { '#text': generator } : generator;
+
+  return selectGenerator(value);
+});
+
+const getString = (obj: any) => {
+  if (!obj) {
+    return null;
+  }
+
+  if (isString(obj)) {
+    return obj;
+  }
+
+  return null;
+};
+
+const getIcon = flow<Nullable<string>>(get('icon'), getString);
+
+const getLogo = flow<Nullable<string>>(get('logo'), getString);
 
 export const getChannel = (content: any): Channel => {
   const root = content.rss || content.feed || content['rdf:RDF'];
@@ -85,5 +119,9 @@ export const getChannel = (content: any): Channel => {
     publishedOn: getPublishedOn(channel),
     categories: getCategories(channel),
     entries: getEntries(channel),
+    generator: getGenerator(channel),
+    ttl: getTtl(channel),
+    icon: getIcon(channel),
+    logo: getLogo(channel),
   };
 };
