@@ -25,6 +25,12 @@ const run = (directory: string) =>
   });
 
 describe('rssParser', () => {
+  it('empty payload should return null', () => {
+    const result = rssParser.parseString('');
+
+    expect(result).toStrictEqual(null);
+  });
+  
   run('general');
   run('atom_full');
   run('media');

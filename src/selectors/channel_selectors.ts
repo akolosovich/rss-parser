@@ -100,7 +100,16 @@ const getIcon = flow<Nullable<string>>(get('icon'), getString);
 const getLogo = flow<Nullable<string>>(get('logo'), getString);
 
 export const getChannel = (content: any): Channel => {
+  if (!content) {
+    return null;
+  }
+  
   const root = content.rss || content.feed || content['rdf:RDF'];
+
+  if (!root) {
+    return null;
+  }
+
   const channel = root.channel || root;
 
   return {
