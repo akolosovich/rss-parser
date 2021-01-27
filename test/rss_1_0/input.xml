@@ -1,0 +1,76 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:admin="http://webns.net/mvcb/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+    <channel rdf:about="https://www.craigslist.org/about/best/all/">
+        <title>Best of Craigslist</title>
+        <link>https://www.craigslist.org/about/best/all/</link>
+        <description>Best postings from craigslist.org, selected by readers</description>
+        <dc:language>en-us</dc:language>
+        <dc:rights>copyright 2021 craigslist</dc:rights>
+        <dc:publisher>robot@craigslist.org</dc:publisher>
+        <dc:creator>robot@craigslist.org</dc:creator>
+        <dc:source>https://www.craigslist.org/about/best/all/</dc:source>
+        <dc:title>Best of Craigslist</dc:title>
+        <dc:type>Collection</dc:type>
+        <syn:updateBase>2020-12-04T14:45:23-08:00</syn:updateBase>
+        <syn:updateFrequency>2</syn:updateFrequency>
+        <syn:updatePeriod>daily</syn:updatePeriod>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/sfo/7241823593.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/sfo/7194996826.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/htf/7100786040.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/sac/7052566619.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/lax/7010241197.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/sfo/6997762210.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/aus/6976267552.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/ral/6950989409.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/van/6901570431.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/nyc/6899632587.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/ric/6881185958.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/lax/6812651177.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/sfo/6805541022.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/phx/6799514609.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/pit/6791954114.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/ybs/6764837183.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/sfo/6725919483.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/van/6690774296.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/pdx/6679230947.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/sfo/6654513433.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/sfo/6621354952.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/sfo/6612026346.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/dal/6609315518.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/chs/6594680929.html"/>
+                <rdf:li rdf:resource="https://www.craigslist.org/about/best/pdx/6590745682.html"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <item rdf:about="https://www.craigslist.org/about/best/sfo/7241823593.html">
+        <title>Jet Powered Volkswagen Beetle</title>
+        <link>https://www.craigslist.org/about/best/sfo/7241823593.html</link>
+        <description>--Yes this is a real ad, and yes I used the photos everyone has seen from my website and shared. The last photo on this ad hasn't been posted anywhere and shows the lift I store it on. I take it down once and a while and run it. Again, this is a real ad for the world famous jet powered Beetle.
+            <br>
+                <br> Street-Legal Jet Powered Volkswagen Beetle $550k. Why on Craiglist? Why not? Why a jet Beetle?
+                    <br>
+                        <br> I think it may be time to let go of my flame throwing, running and driving jet car. Registration up to date. The car has two engines: the production gasoline engine in the front, driving the front wheels, and the jet engine in the back. The idea is that you drive around legally on the gasoline engine then, when you want to have some fun, spin up the jet and get on the burner (you can start the jet while driving along on the gasoline engine). I built the car because I wanted the wildest street-legal ride possible. I was able to use some stuff I learned while getting my fancy engineering degree with this project (I have a PhD in Mechanical Engineering from Stanford University). It was great to design this street-legal jet car without distractions from other peopleâs projects, solely because no one has done it before. I have no idea how fast the car will go, and probably never will. I built the car in order to thrill me, not kill me. That said, I do enjoy the occasional blast down the highway.
+                            <br>
+                                <br> I chose the Beetle because it looks cool with the jet and it shows it off well. Remember the Hurst wheelstanding Barracuda "Hemi Under Glass"? Well, this is "Jet Under Glass". Air for the jet enters the car through the two side windows and the sunroof. It can be a little windy inside with the jet engine running but not too bad. I built the car to look like VW delivered it this way. It drives like a stock Beetle and is safe. The response to driving it on the street and going to the hot rod shows (San Francisco Custom Car Show, Grand National Roadster Show in Pomona, and the Detroit Autorama) has been fantastic. This car attracts crowds better than any âshowâ car. The car has also been on TV nationwide.
+                                    <br>
+                                        <br> The back of the gauge panel is open to add to the techie look. There are three gauges for the jet: %RPM, Oil Pressure, and Turbine Inlet Temperature. The most important is turbine inlet temperature. If you exceed about 650 degrees C for very long, you damage the engine. This is critical on start-up. You don't want a "hot-start". The throttle for the jet engine is located next to the gear selector. It is a lever and has three buttons: Cool, Big-Fire, and Afterburner. "Cool" leans out the engine and is used to lower the turbine inlet temperature if you get a hot-start. To light big-fire or the afterburner, you hold a button down and 1/2 second later, press the hot-streak button on the floor. Then things happen! Notice the kerosene level gauge in front of the gear selector (jet fuel is mostly kerosene).
+                                            <br>
+                                                <br> There is a lot going on in the back. The attention to detail in this car borders on obsessive. Note the aluminum block holding/protecting the halon gas line, pull line, harness to engine, and oil pressure line. Rectangular tank under inlet screen is for various fuel drains. Note temperature gauge and shutoff valve for dry sump tank. 3 gallons of turbine oil at $25/quart (ouch!). The production hatch release on the driver's door now activates two latches (one on each side) and the hatch pops open just like VW intended. The "hatch not closed" warning light is functional as well.
+                                                    <br>
+                                                        <br> The engine is a General Electric Model T58-8F with some internal modifications and a custom tailpipe. The 300lb. engine spins up to 26,000 RPM (idle is 13,000 RPM), draws air at 11,000 CFM, and is rated at 1350 hp. The structure holding the engine was designed using finite element analysis and is redundant. Strong, damage tolerant, and light. The force from the jet is harnessed using sandwich plates bolted to contoured aluminum billets inserted into the frame rails. The engine has rigid mounts with rubber bushings in the front and the back are sliding. It grows as it warms up so the engine mounts have to account for this. The interior was finished in the original color with two-stage PPG paint. A heat blanket keeps the plastic bumper from melting when the jet is operating.
+                                                            <br>
+                                                                <br> The Kerosene is stored in a custom 14 gallon, baffled, foam-filled Kevlar fuel cell in the spare tire well. The tank has two outlets in the back: a -12 on the left side and a -10 on the right. The -10 goes to a shutoff, then a Barry Grant pump (one of the few hot rod parts on the car), then up into the car where it sees a filter, a regulator, and an electrical shutoff valve before feeding the engine. The -12 goes into a shutoff then a custom, 1.5hp 11,000 rpm 24V electric magnesium, pump. The pump can maintain 100 psi at 550 gph. From the pump it goes into the car to a filter, then a large regulator, and then to the afterburner solenoid and the big-fire solenoid (to left of pump and feeding bottom of tailpipe through orange covered hose).
+                                                                    <br>
+                                                                        <br> All circuits feeding solenoids and pumps have fuses, relays, kick-back diodes to minimize contact arcing, sealed connectors, and use automotive wires of a gauge giving a maximum of 1V drop over the circuit loop. The system uses a second battery and fuse/relay panel, halon fire system and 5 gallon dry sump tank. A 24V starter motor is in the nose of the engine. 700 A of current goes into that motor for 20 seconds during start-up. Heat limits starts to three in one hour. Lastly, the screen is to avoid FOD (foreign object damage) but the jet still keeps sucking the rose out of the bud vase!
+                                                                            <br>
+                                                                                <br>
+                                                                                </description>
+                                                                                <dc:creator>robot@craigslist.org</dc:creator>
+                                                                                <dc:date>2020-12-04T14:45:23-08:00</dc:date>
+                                                                                <dc:rights>copyright 2021 craigslist</dc:rights>
+                                                                                <dc:source>https://www.craigslist.org/about/best/sfo/7241823593.html</dc:source>
+                                                                                <dc:title>Jet Powered Volkswagen Beetle</dc:title>
+                                                                                <dc:type>text</dc:type>
+                                                                            </item>
+                                                                        </rdf:RDF>

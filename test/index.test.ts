@@ -30,10 +30,12 @@ describe('rssParser', () => {
 
     expect(result).toStrictEqual(null);
   });
-  
+
   run('general');
   run('atom_full');
   run('media');
+  run('rss_1_0');
+  
   run('dtf_ru');
   run('nytimes_com');
   run('abcnews.go.com');

@@ -1,4 +1,5 @@
 import { Nullable } from './base';
+import { DublinCore } from './dc';
 import { Media } from './media';
 
 export enum eLinkRel {
@@ -106,6 +107,7 @@ export type BaseFeed = null | {
   authors?: Person[];
   contributors?: Person[];
   categories?: Category[];
+  dc?: DublinCore;
 };
 
 export type Entry =

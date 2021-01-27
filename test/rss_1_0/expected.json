@@ -1,0 +1,86 @@
+{
+  "id": null,
+  "title": "Best of Craigslist",
+  "version": null,
+  "description": "Best postings from craigslist.org, selected by readers",
+  "language": null,
+  "links": [
+    {
+      "href": "https://www.craigslist.org/about/best/all/",
+      "rel": "alternate",
+      "type": null,
+      "hreflang": null,
+      "title": null,
+      "length": 0
+    }
+  ],
+  "image": null,
+  "managingEditor": null,
+  "webMaster": null,
+  "authors": [],
+  "contributors": [],
+  "updatedOn": null,
+  "publishedOn": null,
+  "categories": [],
+  "entries": [
+    {
+      "id": null,
+      "title": {
+        "value": "Jet Powered Volkswagen Beetle",
+        "type": "html"
+      },
+      "description": {
+        "value": "--Yes this is a real ad, and yes I used the photos everyone has seen from my website and shared. The last photo on this ad hasn't been posted anywhere and shows the lift I store it on. I take it down once and a while and run it. Again, this is a real ad for the world famous jet powered Beetle.",
+        "type": null
+      },
+      "updatedOn": null,
+      "publishedOn": null,
+      "copyright": null,
+      "links": [
+        {
+          "href": "https://www.craigslist.org/about/best/sfo/7241823593.html",
+          "rel": "alternate",
+          "type": null,
+          "hreflang": null,
+          "title": null,
+          "length": 0
+        }
+      ],
+      "categories": [],
+      "source": null,
+      "enclosures": [],
+      "content": null,
+      "authors": [],
+      "contributors": [],
+      "media": null,
+      "dc": null
+    }
+  ],
+  "generator": null,
+  "ttl": 0,
+  "icon": null,
+  "logo": null,
+  "dc": {
+    "id": null,
+    "title": "Best of Craigslist",
+    "creators": [
+      "robot@craigslist.org"
+    ],
+    "subject": null,
+    "description": null,
+    "publishers": [
+      "robot@craigslist.org"
+    ],
+    "contributors": [],
+    "date": null,
+    "type": "Collection",
+    "format": null,
+    "sources": [
+      "https://www.craigslist.org/about/best/all/"
+    ],
+    "language": "en-us",
+    "relation": null,
+    "coverage": null,
+    "rights": "copyright 2021 craigslist"
+  }
+}

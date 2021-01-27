@@ -461,5 +461,6 @@
   },
   "ttl": 0,
   "icon": "https://channel-icon-url",
-  "logo": "https://channel-logo.png"
+  "logo": "https://channel-logo.png",
+  "dc": null
 }

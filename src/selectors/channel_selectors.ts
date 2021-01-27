@@ -21,6 +21,7 @@ import {
   getContributors,
 } from './common_selectors';
 import { getPropText, getPropUri, getPropVersion } from './props_selectors';
+import { getDublinCore } from './dublin_core_selectors';
 
 const getTitle = flow<string>(get('title'), (title: any) => {
   if (!title) {
@@ -99,11 +100,34 @@ const getIcon = flow<Nullable<string>>(get('icon'), getString);
 
 const getLogo = flow<Nullable<string>>(get('logo'), getString);
 
+const selectChannel = createStructuredSelector<Channel>({
+  id: getGuid,
+  title: getTitle,
+  version: getPropVersion,
+  description: getDescription,
+  language: getLanguage,
+  links: getLinks,
+  image: getImage,
+  managingEditor: getManagingEditor,
+  webMaster: getWebMaster,
+  authors: getAuthors,
+  contributors: getContributors,
+  updatedOn: getUpdatedOn,
+  publishedOn: getPublishedOn,
+  categories: getCategories,
+  entries: getEntries,
+  generator: getGenerator,
+  ttl: getTtl,
+  icon: getIcon,
+  logo: getLogo,
+  dc: getDublinCore,
+});
+
 export const getChannel = (content: any): Channel => {
   if (!content) {
     return null;
   }
-  
+
   const root = content.rss || content.feed || content['rdf:RDF'];
 
   if (!root) {
@@ -112,25 +136,14 @@ export const getChannel = (content: any): Channel => {
 
   const channel = root.channel || root;
 
-  return {
-    id: getGuid(channel),
-    title: getTitle(channel),
-    version: getPropVersion(root),
-    description: getDescription(channel),
-    language: getLanguage(channel),
-    links: getLinks(channel),
-    image: getImage(channel),
-    managingEditor: getManagingEditor(channel),
-    webMaster: getWebMaster(channel),
-    authors: getAuthors(channel),
-    contributors: getContributors(channel),
-    updatedOn: getUpdatedOn(channel),
-    publishedOn: getPublishedOn(channel),
-    categories: getCategories(channel),
-    entries: getEntries(channel),
-    generator: getGenerator(channel),
-    ttl: getTtl(channel),
-    icon: getIcon(channel),
-    logo: getLogo(channel),
-  };
+  if (root.channel) {
+    const otherKeys = Object.keys(root).filter(key => key !== 'channel');
+
+    if (otherKeys.length) {
+      // RSS 1.0
+      otherKeys.forEach(key => (channel[key] = root[key]));
+    }
+  }
+
+  return selectChannel(channel);
 };
