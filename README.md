@@ -31,7 +31,6 @@ Thirdly, I wanted to create private RSS server as a replacement for public one (
 
 - fix dates
 - parse and filter languages
-- add RSS 1.0 support
 - use proper tests
 
 ## Specs and Namespaces
